@@ -12,11 +12,11 @@ namespace Library.Domain.Core.Models
 
         public int BookId { get; set; }
 
-        public Book Book { get; set; }
+        public virtual Book Book { get; set; }
 
         public int UserId { get; set; }
 
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         public DateTime TakenDate { get; set; }
 
