@@ -12,8 +12,7 @@ namespace Library.Infrastructure.Data
                 : base(store)
         {
         }
-        public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options,
-                                                IOwinContext context)
+        public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
         {
             LibraryDbContext db = context.Get<LibraryDbContext>();
             ApplicationUserManager manager = new ApplicationUserManager(new UserStore<User>(db));

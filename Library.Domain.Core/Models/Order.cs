@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Domain.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace Library.Domain.Core.Models
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
+
+        public OrderStatus Status { get; set; }
 
         public DateTime TakenDate { get; set; }
 

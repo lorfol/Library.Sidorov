@@ -3,7 +3,7 @@ namespace Library.Infrastructure.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddIdentityUser : DbMigration
+    public partial class NewMigration : DbMigration
     {
         public override void Up()
         {
@@ -26,6 +26,7 @@ namespace Library.Infrastructure.Data.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         BookId = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
+                        Status = c.Int(nullable: false),
                         TakenDate = c.DateTime(nullable: false),
                         ReturnDate = c.DateTime(nullable: false),
                         LateFine = c.Single(nullable: false),

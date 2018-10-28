@@ -77,9 +77,9 @@
   <ItemGroup>
     <Compile Include="ApplicationUserManager.cs" />
     <Compile Include="LibraryDbContext.cs" />
-    <Compile Include="Migrations\201810281334594_AddIdentityUser.cs" />
-    <Compile Include="Migrations\201810281334594_AddIdentityUser.Designer.cs">
-      <DependentUpon>201810281334594_AddIdentityUser.cs</DependentUpon>
+    <Compile Include="Migrations\201810282159295_NewMigration.cs" />
+    <Compile Include="Migrations\201810282159295_NewMigration.Designer.cs">
+      <DependentUpon>201810282159295_NewMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,8 +107,8 @@
     <Folder Include="Seeds\JsonData\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810281334594_AddIdentityUser.resx">
-      <DependentUpon>201810281334594_AddIdentityUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810282159295_NewMigration.resx">
+      <DependentUpon>201810282159295_NewMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
