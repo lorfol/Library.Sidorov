@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,9 @@ using System.Threading.Tasks;
 
 namespace Library.Domain.Core.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
-
-        public string Email { get; set; }
-
-        public string Password { get; set; }
-
-        public string FullName { get; set; }
+        public string Name { get; set; }
 
         public virtual IEnumerable<Order> Orders { get; set; }
     }
