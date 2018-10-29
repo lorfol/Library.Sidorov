@@ -10,7 +10,7 @@ namespace Library.App.Controllers
 {
     public class HomeController : Controller
     {
-        LibraryDbContext context = new LibraryDbContext();
+        UnitOfWork unitOfWork = new UnitOfWork();
 
         public ActionResult Index()
         {
@@ -60,6 +60,11 @@ namespace Library.App.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult BooksList()
+        {
             return View();
         }
     }

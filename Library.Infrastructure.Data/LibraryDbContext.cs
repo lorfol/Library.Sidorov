@@ -13,6 +13,8 @@ namespace Library.Infrastructure.Data
 
         public DbSet<Order> Orders { get; set; }
 
+        public DbSet<Author> Authors { get; set; }
+
         public static LibraryDbContext Create()
         {
             return new LibraryDbContext();
