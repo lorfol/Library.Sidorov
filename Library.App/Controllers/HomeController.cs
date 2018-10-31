@@ -2,6 +2,7 @@
 using Library.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,6 +15,8 @@ namespace Library.App.Controllers
 
         public ActionResult Index()
         {
+            var a = unitOfWork.Books.GetAll();
+
             //Book book = new Book()
             //{
             //    Count = 3,

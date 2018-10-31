@@ -5,13 +5,15 @@ namespace Library.Domain.Core.Models
 {
     public class Book
     {
+        public Book()
+        {
+            Authors = new List<Author>();
+        }
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        //public int AuthorId { get; set; }
-
-        //public virtual Author Author { get; set; }
+        public virtual ICollection<Author> Authors { get; set; }
 
         public string Description { get; set; }
 
@@ -20,5 +22,7 @@ namespace Library.Domain.Core.Models
         public DateTime PublicationDate { get; set; }
 
         public virtual IEnumerable<Order> Orders { get; set; }
+
+        //  TODO: mb add field 'BookStatus' to manage is book available or in reeding room or out of library
     }
 }

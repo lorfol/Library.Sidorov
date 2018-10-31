@@ -78,13 +78,9 @@
   <ItemGroup>
     <Compile Include="ApplicationUserManager.cs" />
     <Compile Include="LibraryDbContext.cs" />
-    <Compile Include="Migrations\201810282159295_NewMigration.cs" />
-    <Compile Include="Migrations\201810282159295_NewMigration.Designer.cs">
-      <DependentUpon>201810282159295_NewMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810290947534_AddedAuthorTable.cs" />
-    <Compile Include="Migrations\201810290947534_AddedAuthorTable.Designer.cs">
-      <DependentUpon>201810290947534_AddedAuthorTable.cs</DependentUpon>
+    <Compile Include="Migrations\201810291724536_InitDb.cs" />
+    <Compile Include="Migrations\201810291724536_InitDb.Designer.cs">
+      <DependentUpon>201810291724536_InitDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,11 +88,13 @@
     <Compile Include="Repositories\BookRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Seeds\LibraryDbInitializer.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Seeds\JsonData\AuthorsStartData.json" />
     <None Include="Seeds\JsonData\BooksStartData.json" />
   </ItemGroup>
   <ItemGroup>
@@ -109,13 +107,9 @@
       <Name>Library.Domain.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810282159295_NewMigration.resx">
-      <DependentUpon>201810282159295_NewMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810290947534_AddedAuthorTable.resx">
-      <DependentUpon>201810290947534_AddedAuthorTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810291724536_InitDb.resx">
+      <DependentUpon>201810291724536_InitDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

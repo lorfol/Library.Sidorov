@@ -3,120 +3,113 @@
     "Name": "Via C#",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 1 }
+    ]
   },
   {
     "Name": "The Lord of the Rings",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "Count": 3,
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 1 },
+      { "Id": 2 }
+    ]
   },
   {
     "Name": "The Master and Margarita",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Criptology",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "The Door into the Summer",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Microsoft Visual C#",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Java",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Java Script",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Romeo and Juliet",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Angels Empire",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 3 },
+      { "Id": 4 },
+      { "Id": 5 }
+    ]
   },
   {
     "Name": "Game of Thrones",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 4 },
+      { "Id": 5 }
+    ]
   },
   {
-    "Name": "Kotlin",
+    "Name": "Microsoft Visual C#",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "Count": 0,
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 1 }
+    ]
+  },
+  {
+    "Name": "Java",
+    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
+    "Count": 4,
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 6 },
+      { "Id": 7 }
+    ]
   },
   {
     "Name": ".NET Core 2.0",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Database Development",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 7 },
+      { "Id": 8 },
+      { "Id": 9 }
+    ]
   },
   {
-    "Name": "Book name",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "Mein Kampf",
+    "Name": "Empire of Angels",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 8 },
+      { "Id": 9 }
+    ]
   },
   {
-    "Name": "Guitar playing guide",
+    "Name": "JavaScript",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 1 },
+      { "Id": 2 },
+      { "Id": 3 }
+    ]
   },
   {
-    "Name": "Fairytales",
+    "Name": "Extreme Programming",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 2 },
+      { "Id": 3 },
+      { "Id": 9 }
+    ]
   },
   {
     "Name": "Assembler",
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 3,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
-  },
-  {
-    "Name": "C++",
-    "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
-    "Count": 2,
-    "PublicationDate": "2012-04-23T18:25:43.511Z"
+    "Count": 0,
+    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "Authors": [
+      { "Id": 4 },
+      { "Id": 8 },
+      { "Id": 1 }
+    ]
   }
 ]

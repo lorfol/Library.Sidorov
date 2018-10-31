@@ -3,10 +3,19 @@ namespace Library.Infrastructure.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class NewMigration : DbMigration
+    public partial class InitDb : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Authors",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.Books",
                 c => new
@@ -107,6 +116,19 @@ namespace Library.Infrastructure.Data.Migrations
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true, name: "RoleNameIndex");
             
+            CreateTable(
+                "dbo.BookAuthors",
+                c => new
+                    {
+                        Book_Id = c.Int(nullable: false),
+                        Author_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Book_Id, t.Author_Id })
+                .ForeignKey("dbo.Books", t => t.Book_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Authors", t => t.Author_Id, cascadeDelete: true)
+                .Index(t => t.Book_Id)
+                .Index(t => t.Author_Id);
+            
         }
         
         public override void Down()
@@ -117,6 +139,10 @@ namespace Library.Infrastructure.Data.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Orders", "BookId", "dbo.Books");
+            DropForeignKey("dbo.BookAuthors", "Author_Id", "dbo.Authors");
+            DropForeignKey("dbo.BookAuthors", "Book_Id", "dbo.Books");
+            DropIndex("dbo.BookAuthors", new[] { "Author_Id" });
+            DropIndex("dbo.BookAuthors", new[] { "Book_Id" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
@@ -125,6 +151,7 @@ namespace Library.Infrastructure.Data.Migrations
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Orders", new[] { "User_Id" });
             DropIndex("dbo.Orders", new[] { "BookId" });
+            DropTable("dbo.BookAuthors");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
@@ -132,6 +159,7 @@ namespace Library.Infrastructure.Data.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.Orders");
             DropTable("dbo.Books");
+            DropTable("dbo.Authors");
         }
     }
 }
