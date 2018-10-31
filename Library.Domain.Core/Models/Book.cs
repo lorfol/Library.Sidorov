@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Library.Domain.Core.Models
 {
     public class Book
-    {
+    { //  TODO: add prop Edition and DateOfEdition. And new model for Edition
         public Book()
         {
             Authors = new List<Author>();

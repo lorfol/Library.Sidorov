@@ -5,3 +5,31 @@
 
 <h2>MyAccount</h2>
 
+
+
+@*<h3>Orders</h3>*@
+@*<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>BookName</th>
+            <th>Status</th>
+            <th>CreationDate</th>
+            <th>ReturnDate</th>
+            <th>LateFine</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Count</td>
+                <td>
+                    <button type="button" class="btn btn-info">Details</button>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>*@

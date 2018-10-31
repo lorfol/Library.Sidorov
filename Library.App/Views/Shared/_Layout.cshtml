@@ -6,8 +6,13 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
+    <br />
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -16,18 +21,45 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("LibryApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                @*<ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Books", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Books", "BooksList", "Home")</li>
+                        </ul>*@
+
+                <ul class="nav navbar-nav navbar-right">
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        if (HttpContext.Current.User.IsInRole("Administrator"))
+                        {
+                            <li>@Html.ActionLink("Your Admin Account", "MyAccount", "Account")</li>
+                            <li>@Html.ActionLink("Orders", "Orders", "Account")</li>
+                        }
+                        else if (HttpContext.Current.User.IsInRole("Librarian"))
+                        {
+                            <li>@Html.ActionLink("Your Librarian Account", "MyAccount", "Account")</li>
+                            <li>@Html.ActionLink("Orders", "Orders", "Account")</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Your Account", "MyAccount", "Account")</li>
+                            <li>@Html.ActionLink("Orders", "Orders", "Account")</li>
+                            <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
+                        }
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Sign In", "Login", "Account")</li>
+                        <li>@Html.ActionLink("Sign Up", "Register", "Account")</li>
+                    }
                 </ul>
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
