@@ -6,7 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
+    <link href="@Url.Content("~/Styles/bootstrap.min.css")" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
@@ -24,12 +25,6 @@
                 @Html.ActionLink("LibryApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                @*<ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Books", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>*@
-
                 <ul class="nav navbar-nav navbar-right">
                     @if (HttpContext.Current.User.Identity.IsAuthenticated)
                     {
