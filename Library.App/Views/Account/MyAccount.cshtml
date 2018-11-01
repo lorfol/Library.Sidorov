@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "MyAccount";
+}
+
+<h2>MyAccount</h2>
+
+@*<br />
+
+    <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-primary" id="AccountInfo">Account Info</a>
+        <a href="#" class="btn btn-primary" id="MyOrders">My Orders</a>
+    </div>
+
+    @Html.Partial("")
+
+    <script type="text/javascript">
+        $('#AccountInfo').live('click', function () {
+            $.@Html.Partial("AccountInfo")
+        });
+        $('#MyOrders').live('click', function () {
+            $.post('АдресДействия', { id })
+        });
+    </script>*@
+
+
+@*<h3>Orders</h3>*@
+@*<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>BookName</th>
+                <th>Status</th>
+                <th>CreationDate</th>
+                <th>ReturnDate</th>
+                <th>LateFine</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Count</td>
+                    <td>
+                        <button type="button" class="btn btn-info">Details</button>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>*@

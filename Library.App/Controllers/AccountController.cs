@@ -24,6 +24,7 @@ namespace Library.App.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<ActionResult> Register(RegisterModel model)
         {
             if (ModelState.IsValid)
@@ -54,6 +55,7 @@ namespace Library.App.Controllers
             return View(model);
         }
 
+        [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.returnUrl = returnUrl;
@@ -61,6 +63,7 @@ namespace Library.App.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginModel model, string returnUrl)
         {
@@ -69,7 +72,7 @@ namespace Library.App.Controllers
                 User user = UserManager.Find(model.Email, model.Password);
                 if (user == null)
                 {
-                    ModelState.AddModelError("", "Неверный логин или пароль.");
+                    ModelState.AddModelError("", "Wrong email or password.");
                 }
                 else
                 {
@@ -92,6 +95,13 @@ namespace Library.App.Controllers
         {
             AuthenticationManager.SignOut();
             return RedirectToAction("Login");
+        }
+
+        [Authorize]
+        public ActionResult MyAccount()
+        {
+
+            return View();
         }
     }
 }

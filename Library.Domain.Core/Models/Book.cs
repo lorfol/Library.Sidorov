@@ -24,5 +24,6 @@ namespace Library.Domain.Core.Models
         public virtual IEnumerable<Order> Orders { get; set; }
 
         //  TODO: mb add field 'BookStatus' to manage is book available or in reeding room or out of library
+        //  TODO: add prop Edition and DateOfEdition. And new model for Edition
     }
 }
