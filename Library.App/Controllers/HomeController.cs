@@ -13,6 +13,7 @@ namespace Library.App.Controllers
     {
         UnitOfWork unitOfWork = new UnitOfWork();
 
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var listOfBooks = unitOfWork.Books.GetAll();
@@ -20,6 +21,7 @@ namespace Library.App.Controllers
             return View(listOfBooks);
         }
 
+        [AllowAnonymous]
         public ActionResult Details(int bookId)
         {
             var book = unitOfWork.Books.GetById(bookId);
@@ -28,6 +30,7 @@ namespace Library.App.Controllers
             return HttpNotFound();
         }
 
+        [Authorize]
         public ActionResult Orders()
         {
             var orders = unitOfWork.Orders.GetAll(); // TODO: not all orders. only current user orders

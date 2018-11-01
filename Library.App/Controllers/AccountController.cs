@@ -18,6 +18,7 @@ namespace Library.App.Controllers
 
         private IAuthenticationManager AuthenticationManager => HttpContext.GetOwinContext().Authentication;
 
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
