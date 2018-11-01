@@ -1,0 +1,40 @@
+﻿
+@using Library.Domain.Core.Models
+@model IEnumerable<Order>
+
+@{
+    ViewBag.Title = "Oders";
+}
+
+<h2>Oders</h2>
+
+<input class="form-control" id="myInput" type="text" placeholder="Search by Name/Author">
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>BookName</th>
+            <th>Status</th>
+            <th>Taken Date</th>
+            <th>Return Date</th>
+            <th>Late Fine</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Book.Name</td>
+                <td>@item.Status</td>
+                <td>@item.TakenDate</td>
+                <td>@item.ReturnDate</td>
+                <td>@item.LateFine</td>
+                <td>
+                    @Html.ActionLink("Details", "OrderDetails")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

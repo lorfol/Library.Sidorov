@@ -26,18 +26,18 @@
                     {
                         if (HttpContext.Current.User.IsInRole("Administrator"))
                         {
-                            <li>@Html.ActionLink("Your Admin Account", "MyAccount", "Account")</li>
-                            <li>@Html.ActionLink("Orders", "Orders", "Account")</li>
+                            <li>@Html.ActionLink("Admin Account", "MyAccount", "Account")</li>
+                            <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
                         }
                         else if (HttpContext.Current.User.IsInRole("Librarian"))
                         {
-                            <li>@Html.ActionLink("Your Librarian Account", "MyAccount", "Account")</li>
-                            <li>@Html.ActionLink("Orders", "Orders", "Account")</li>
+                            <li>@Html.ActionLink("Librarian Account", "MyAccount", "Account")</li>
+                            <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
                         }
                         else
                         {
                             <li>@Html.ActionLink("Your Account", "MyAccount", "Account")</li>
-                            <li>@Html.ActionLink("Orders", "Orders", "Account")</li>
+                            <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
                             <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                     }

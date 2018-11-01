@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Domain.Core.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace Library.Domain.Core.Models
@@ -15,6 +16,10 @@ namespace Library.Domain.Core.Models
 
         public virtual ICollection<Author> Authors { get; set; }
 
+        public int? PublisherId { get; set; }
+
+        public virtual Publisher Publisher { get; set; }
+
         public string Description { get; set; }
 
         public int Count { get; set; }
@@ -23,7 +28,6 @@ namespace Library.Domain.Core.Models
 
         public virtual IEnumerable<Order> Orders { get; set; }
 
-        //  TODO: mb add field 'BookStatus' to manage is book available or in reeding room or out of library
-        //  TODO: add prop Edition and DateOfEdition. And new model for Edition
+        public BookStatus Status { get; set; }
     }
 }

@@ -26,8 +26,8 @@
                 <td>@(String.Join(", ", item.Authors.Select(x => x.Name)))</td>
                 <td>@item.Count</td>
                 <td>
-                    <button type="button" class="btn btn-info">Details</button>
-                    <button type="button" class="btn btn-success">Order</button>
+                    @Html.ActionLink("Details", "Details", new { bookId = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Order", "CreateOrder", new { bookId = item.Id }, new { @class = "btn btn-success" })
                 </td>
 
             </tr>

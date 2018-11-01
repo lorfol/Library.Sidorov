@@ -20,18 +20,24 @@ namespace Library.App.Controllers
             return View(listOfBooks);
         }
 
-        public ActionResult About()
+        public ActionResult Details(int bookId)
         {
-            return View();
+            var book = unitOfWork.Books.GetById(bookId);
+            if (book != null)
+                return View("Details", book);
+            return HttpNotFound();
         }
 
-        public ActionResult Contact()
+        public ActionResult Orders()
         {
-            return View();
+            var orders = unitOfWork.Orders.GetAll(); // TODO: not all orders. only current user orders
+            return View(orders);
         }
 
-        public ActionResult BooksList()
+        [Authorize]
+        public ActionResult CreateOrder(int bookId)
         {
+            
             return View();
         }
     }
