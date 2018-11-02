@@ -99,7 +99,7 @@ namespace Library.App.Controllers
         }
 
         [Authorize]
-        public ActionResult MyAccount()
+        public ActionResult MyAccount(User user)
         {
 
             return View();

@@ -43,5 +43,17 @@ namespace Library.App.Controllers
             
             return View();
         }
+
+        public ActionResult AccountInfo(int userId)
+        {
+            
+            return PartialView("AccountInfoPartial");
+        }
+
+        public ActionResult MyOrders(int userId)
+        {
+
+            return PartialView("MyOrdersPartial");
+        }
     }
 }

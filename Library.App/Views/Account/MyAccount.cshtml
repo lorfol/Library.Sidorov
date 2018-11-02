@@ -1,4 +1,8 @@
 ﻿
+@using Library.Domain.Core.Models
+@model User
+
+
 @{
     ViewBag.Title = "MyAccount";
 }
@@ -7,19 +11,24 @@
 
 <br />
 
-    <div class="btn-group btn-group-justified">
-        <a href="#" class="btn btn-primary" id="AccountInfo">Account Info</a>
-        <a href="#" class="btn btn-primary" id="MyOrders">My Orders</a>
+<div class="btn-group btn-group-justified">
+    @*<a href="#" class="btn btn-primary" id="AccountInfo">Account Info</a>
+    <a href="#" class="btn btn-primary" id="MyOrders">My Orders</a>*@
+    @Ajax.ActionLink("Accont Info", "AccountInfo", "Home", new {userId = Model.Id }, new AjaxOptions { UpdateTargetId = "incertContent" }, new { @class = "btn btn-primary" })
+    @Ajax.ActionLink("My Orders", "MyOrders", "Home", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "incertContent" }, new { @class= "btn btn-primary" })
+</div>
+
+<div class="row">
+    <div class="col-lg-2" id="incertContent">
+
     </div>
+</div>
 
 
 
 
 
-
-
-
-    @*<script type="text/javascript">
+@*<script type="text/javascript">
         $('#AccountInfo').live('click', function () {
             $.@Html.Partial("AccountInfo")
         });

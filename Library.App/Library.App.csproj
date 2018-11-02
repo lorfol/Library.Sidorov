@@ -248,8 +248,9 @@
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
-    <Content Include="Views\Home\Orders.cshtml" />
+    <Content Include="Views\Home\MyOrdersPartial.cshtml" />
     <Content Include="Views\Home\CreateOrder.cshtml" />
+    <Content Include="Views\Home\AccountInfoPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
