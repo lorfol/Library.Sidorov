@@ -21,7 +21,7 @@ namespace Library.App.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            return View("Register");
         }
 
         [HttpPost]
@@ -60,7 +60,7 @@ namespace Library.App.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.returnUrl = returnUrl;
-            return View();
+            return View("Login");
         }
 
         [HttpPost]

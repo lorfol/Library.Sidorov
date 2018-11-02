@@ -1,4 +1,5 @@
-﻿using Library.Infrastructure.Data;
+﻿using Library.App.Mapping;
+using Library.Infrastructure.Data;
 using Library.Infrastructure.Data.Seeds;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace Library.App
         protected void Application_Start()
         {
             Database.SetInitializer<LibraryDbContext>(new LibraryDbInitializer());
+
+            AutoMapperConfiguration.Configure();
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

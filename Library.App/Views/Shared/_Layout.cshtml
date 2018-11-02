@@ -28,11 +28,13 @@
                         {
                             <li>@Html.ActionLink("Admin Account", "MyAccount", "Account")</li>
                             <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
+                            <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                         else if (HttpContext.Current.User.IsInRole("Librarian"))
                         {
                             <li>@Html.ActionLink("Librarian Account", "MyAccount", "Account")</li>
                             <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
+                            <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                         else
                         {

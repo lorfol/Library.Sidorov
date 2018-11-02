@@ -27,7 +27,12 @@
                 <td>@item.Count</td>
                 <td>
                     @Html.ActionLink("Details", "Details", new { bookId = item.Id }, new { @class = "btn btn-info" })
-                    @Html.ActionLink("Order", "CreateOrder", new { bookId = item.Id }, new { @class = "btn btn-success" })
+
+                    @if (!(HttpContext.Current.User.IsInRole("Administrator") ||
+                        HttpContext.Current.User.IsInRole("Librarian")))
+                    {
+                        @Html.ActionLink("Order", "CreateOrder", new { bookId = item.Id }, new { @class = "btn btn-success" })
+                    }
                 </td>
 
             </tr>

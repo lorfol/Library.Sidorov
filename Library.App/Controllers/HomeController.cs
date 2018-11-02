@@ -1,4 +1,6 @@
-﻿using Library.Domain.Core.Models;
+﻿using AutoMapper;
+using Library.App.ViewModels;
+using Library.Domain.Core.Models;
 using Library.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace Library.App.Controllers
         public ActionResult Index()
         {
             var listOfBooks = unitOfWork.Books.GetAll();
-
+            //var books = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(listOfBooks);
             return View(listOfBooks);
         }
 
