@@ -78,9 +78,17 @@
   <ItemGroup>
     <Compile Include="ApplicationUserManager.cs" />
     <Compile Include="LibraryDbContext.cs" />
-    <Compile Include="Migrations\201811011933333_Initial.cs" />
-    <Compile Include="Migrations\201811011933333_Initial.Designer.cs">
-      <DependentUpon>201811011933333_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201811022012434_Initial.cs" />
+    <Compile Include="Migrations\201811022012434_Initial.Designer.cs">
+      <DependentUpon>201811022012434_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811022054004_AddedIsAtReadingRoomFieldToOrederTable.cs" />
+    <Compile Include="Migrations\201811022054004_AddedIsAtReadingRoomFieldToOrederTable.Designer.cs">
+      <DependentUpon>201811022054004_AddedIsAtReadingRoomFieldToOrederTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811022246391_UpdatedUserIdInOrderTable.cs" />
+    <Compile Include="Migrations\201811022246391_UpdatedUserIdInOrderTable.Designer.cs">
+      <DependentUpon>201811022246391_UpdatedUserIdInOrderTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +104,7 @@
     <None Include="packages.config" />
     <None Include="Seeds\JsonData\AuthorsStartData.json" />
     <None Include="Seeds\JsonData\BooksStartData.json" />
+    <None Include="Seeds\JsonData\PublishersStartData.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Library.Domain.Core\Library.Domain.Core.csproj">
@@ -108,8 +117,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811011933333_Initial.resx">
-      <DependentUpon>201811011933333_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811022012434_Initial.resx">
+      <DependentUpon>201811022012434_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811022054004_AddedIsAtReadingRoomFieldToOrederTable.resx">
+      <DependentUpon>201811022054004_AddedIsAtReadingRoomFieldToOrederTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811022246391_UpdatedUserIdInOrderTable.resx">
+      <DependentUpon>201811022246391_UpdatedUserIdInOrderTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

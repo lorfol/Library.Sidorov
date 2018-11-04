@@ -18,8 +18,8 @@ namespace Library.Infrastructure.Data.Seeds
             if (!dbContext.Authors.Any())
             {
                 string file = HostingEnvironment.MapPath(@"/Library.Infrastructure.Data/Seeds/JsonData/AuthorsStartData.json");
-                string p = "..\\Library.Sidorov\\Library.Infrastructure.Data\\Seeds\\JsonData\\AuthorsStartData.json";
-                string path = @"D:\VS_Projects\Library.Sidorov\Library.Infrastructure.Data\Seeds\JsonData\AuthorsStartData.json";
+                string p = "..\\Library\\Library.Infrastructure.Data\\Seeds\\JsonData\\AuthorsStartData.json";
+                string path = @"D:\VS_Projects\Library\Library.Infrastructure.Data\Seeds\JsonData\AuthorsStartData.json";
                 var authors = JsonConvert.DeserializeObject<IEnumerable<Author>>(File.ReadAllText(path));
                 foreach (Author item in authors)
                 {
@@ -29,11 +29,25 @@ namespace Library.Infrastructure.Data.Seeds
                 dbContext.SaveChanges();
             }
 
+            if (!dbContext.Publishers.Any())
+            {
+                string file = HostingEnvironment.MapPath(@"/Library.Infrastructure.Data/Seeds/JsonData/AuthorsStartData.json");
+                string p = "..\\Library\\Library.Infrastructure.Data\\Seeds\\JsonData\\AuthorsStartData.json";
+                string path = @"D:\VS_Projects\Library\Library.Infrastructure.Data\Seeds\JsonData\PublishersStartData.json";
+                var publishers = JsonConvert.DeserializeObject<IEnumerable<Publisher>>(File.ReadAllText(path));
+                foreach (Publisher item in publishers)
+                {
+                    dbContext.Publishers.Add(item);
+                }
+
+                dbContext.SaveChanges();
+            }
+
             if (!dbContext.Books.Any())
             {
                 string file = HostingEnvironment.MapPath(@"/Library.Infrastructure.Data/Seeds/JsonData/BooksStartData.json");
-                string p = "..\\Library.Sidorov\\Library.Infrastructure.Data\\Seeds\\JsonData\\BooksStartData.json";
-                string path = @"D:\VS_Projects\Library.Sidorov\Library.Infrastructure.Data\Seeds\JsonData\BooksStartData.json";
+                string p = "..\\Library\\Library.Infrastructure.Data\\Seeds\\JsonData\\BooksStartData.json";
+                string path = @"D:\VS_Projects\Library\Library.Infrastructure.Data\Seeds\JsonData\BooksStartData.json";
 
                 var books = JsonConvert.DeserializeObject<IEnumerable<Book>>(File.ReadAllText(path));
                 foreach (Book item in books)

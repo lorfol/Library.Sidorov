@@ -2,69 +2,178 @@
     ViewBag.Title = "Home Page";
 }
 
+@using PagedList;
+@using PagedList.Mvc;
 @using Library.Domain.Core.Models
-@model IEnumerable<Book>
+@model IPagedList<Book>
 
 
-<input class="form-control" id="myInput" type="text" placeholder="Search by Name/Author">
+@*<input class="form-control" id="myInput" type="text" placeholder="Search by Name/Author">*@
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    @Html.TextBox("search", String.Empty, new { @class = "form-control", @placeholder = "Search by Name/Author", @value = "search" });
+}
 
+@{
+
+}
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Authors</th>
-            <th>Count</th>
+            <th onclick="changeDirection()">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                {
+
+                    @Html.ActionLink("Name", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "Name", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "Name" ? "desc": "asc" })
+                }
+            </th>
+            <th>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                {
+                    @Html.ActionLink("Author", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "Author", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "Author" ? "desc" : "asc" })
+                }
+            </th>
+            <th>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                {
+                    @Html.ActionLink("Publisher", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "Publisher", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "Publisher" ? "desc" : "asc" })
+                }
+            </th>
+            <th>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                {
+                    @Html.ActionLink("Publication Year", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "PublicationDate", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "PublicationDate" ? "desc" : "asc" })
+                }
+            </th>
+            <th>
+                @Html.ActionLink("Count", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "Count", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "Count" ? "desc" : "asc" })
+            </th>
             <th></th>
         </tr>
     </thead>
+
     <tbody id="myTable">
-        @foreach (var item in Model)
+        @if (Model.Count() == 0)
         {
-            <tr>
-                <td>@item.Name</td>
-                <td>@(String.Join(", ", item.Authors.Select(x => x.Name)))</td>
-                <td>@item.Count</td>
-                <td>
-                    @Html.ActionLink("Details", "Details", new { bookId = item.Id }, new { @class = "btn btn-info" })
-
-                    @if (!(HttpContext.Current.User.IsInRole("Administrator") ||
-                        HttpContext.Current.User.IsInRole("Librarian")))
-                    {
-                        @Html.ActionLink("Order", "CreateOrder", new { bookId = item.Id }, new { @class = "btn btn-success" })
-                    }
-                </td>
-
-            </tr>
+            <tr>No match</tr>
         }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@(String.Join(", ", item.Authors.Select(x => x.Name)))</td>
+                    <td>@item.Publisher.Name</td>
+                    <td>@item.PublicationDate.Year</td>
+                    <td>@item.Count</td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { bookId = item.Id }, new { @class = "btn btn-info" })
+
+                        @if (!(HttpContext.Current.User.IsInRole("Administrator") ||
+                            HttpContext.Current.User.IsInRole("Librarian")))
+                        {
+                            @Html.ActionLink("Order", "CreateOrder", new { bookId = item.Id }, new { @class = "btn btn-success" })
+                        }
+                    </td>
+
+                </tr>
+            }
+        }
+
+
+
+
     </tbody>
 </table>
 
-<div class="row">
-    @*//  TODO: pagination *@
-    <div class="text-center">
-        <ul class="pagination">
-            <li><a href="#"><<</a></li>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, search = Request.QueryString["search"], orderBy = Request.QueryString["orderBy"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true} )
+</div>
 
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
 
-            <li><a href="#">>></a></li>
-        </ul>
+@*<div class="row">
+        //  TODO: pagination
+        <div class="text-center">
+            <ul class="pagination">
+                <li><a href="#"><<</a></li>
+
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+
+                <li><a href="#">>></a></li>
+            </ul>
+        </div>
+    </div>*@
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button id="order_1" onclick="order(false)" type="button" class="btn btn-primary">Order 1</button>
+                <button id="order_2" onclick="order(true)" type="button" class="btn btn-primary">Order 2</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    // TODO: sort books
-    $(document).ready(function () {
-        $("#myInput").on("keyup", function () {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function () {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
+
+    var bookId;
+    var status;
+
+    function func(e) {
+        bookId = e;
+    }
+
+    function order(status) {
+        debugger
+        $.ajax({
+            type: "POST",
+            url: "/Orders/OrderBook",
+            data: {
+                bookId,
+                isAtReadingRoom: status
+            },
+            success: function (result) {
+                debugger;
+                let countOfBook = document.getElementById(bookId);
+                countOfBook.innerText -= 1;
+            },
+            error: function (response) {
+                debugger;
+            },
         });
-    });
+    }
+
+    function changeDirection() {
+
+        
+    }
+
+    // TODO: sort books
+    //$(document).ready(function () {
+    //    $("#myInput").on("keyup", function () {
+    //        var value = $(this).val().toLowerCase();
+    //        $("#myTable tr").filter(function () {
+    //            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    //        });
+    //    });
+    //});
 </script>

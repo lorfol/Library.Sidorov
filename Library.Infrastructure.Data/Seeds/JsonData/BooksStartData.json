@@ -4,6 +4,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 1,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 1,
     "Authors": [
       { "Id": 1 }
     ]
@@ -13,6 +14,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 3,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 2,
     "Authors": [
       { "Id": 1 },
       { "Id": 2 }
@@ -23,6 +25,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 2,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 1,
     "Authors": [
       { "Id": 3 },
       { "Id": 4 },
@@ -34,6 +37,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 3,
     "Authors": [
       { "Id": 4 },
       { "Id": 5 }
@@ -44,6 +48,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 4,
     "Authors": [
       { "Id": 1 }
     ]
@@ -53,6 +58,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 4,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 3,
     "Authors": [
       { "Id": 6 },
       { "Id": 7 }
@@ -63,6 +69,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 1,
     "Authors": [
       { "Id": 7 },
       { "Id": 8 },
@@ -74,6 +81,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 1,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 5,
     "Authors": [
       { "Id": 8 },
       { "Id": 9 }
@@ -84,6 +92,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 2,
     "Authors": [
       { "Id": 1 },
       { "Id": 2 },
@@ -95,6 +104,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 3,
     "Authors": [
       { "Id": 2 },
       { "Id": 3 },
@@ -106,6 +116,7 @@
     "Description": "description txt description txt description txt description txt description txt description txt description txt description txt description txt ",
     "Count": 0,
     "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublisherId": 4,
     "Authors": [
       { "Id": 4 },
       { "Id": 8 },

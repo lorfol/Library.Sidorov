@@ -1,6 +1,10 @@
-﻿using Library.App.Mapping;
+﻿using Library.App.IoC;
+using Library.App.Mapping;
 using Library.Infrastructure.Data;
 using Library.Infrastructure.Data.Seeds;
+using Ninject;
+using Ninject.Modules;
+using Ninject.Web.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,6 +23,10 @@ namespace Library.App
             Database.SetInitializer<LibraryDbContext>(new LibraryDbInitializer());
 
             AutoMapperConfiguration.Configure();
+
+            NinjectModule registrations = new NinjectRegistrations();
+            var kernel = new StandardKernel(registrations);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

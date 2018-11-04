@@ -11,7 +11,7 @@ namespace Library.Domain.Core.Models
 
         public virtual Book Book { get; set; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public virtual User User { get; set; }
 
@@ -22,5 +22,7 @@ namespace Library.Domain.Core.Models
         public DateTime ReturnDate { get; set; }
 
         public float LateFine { get; set; }
+
+        public bool IsAtReadingRoom { get; set; }
     }
 }

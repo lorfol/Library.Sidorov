@@ -15,6 +15,8 @@ namespace Library.Infrastructure.Data
 
         public DbSet<Author> Authors { get; set; }
 
+        public DbSet<Publisher> Publishers { get; set; }
+
         public static LibraryDbContext Create()
         {
             return new LibraryDbContext();

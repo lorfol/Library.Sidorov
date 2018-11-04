@@ -16,7 +16,7 @@ namespace Library.Domain.Core.Models
 
         public virtual ICollection<Author> Authors { get; set; }
 
-        public int? PublisherId { get; set; }
+        public int PublisherId { get; set; }
 
         public virtual Publisher Publisher { get; set; }
 
@@ -27,7 +27,5 @@ namespace Library.Domain.Core.Models
         public DateTime PublicationDate { get; set; }
 
         public virtual IEnumerable<Order> Orders { get; set; }
-
-        public BookStatus Status { get; set; }
     }
 }
