@@ -13,6 +13,10 @@ namespace Library.Domain.Interfaces
 
         IOrderRepository Orders { get; }
 
+        IAuthorRepository Authors { get;  }
+
+        IPublisherRepository Publishers { get; }
+
         void Save();
     }
 }

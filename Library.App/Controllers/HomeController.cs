@@ -30,6 +30,27 @@ namespace Library.App.Controllers
 
             IPagedList<Book> listOfBooks;
 
+            ViewBag.PreviosOrderBy = orderBy;
+            ViewBag.PreviosOrderDirection = orderDirection;
+
+            if (orderBy == "Author")
+            {
+                var list = this.unitOfWork.Books.GetAll().SelectMany(b => b.Authors).ToList();
+                var n = list.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
+                listOfBooks = n.SelectMany(s => s.Books).Distinct().ToPagedList(page ?? 1, 10);
+
+                return View(listOfBooks);
+            }
+
+            if (orderBy == "Publisher")
+            {
+                var list = this.unitOfWork.Books.GetAll().Select(b => b.Publisher).ToList();
+                var n = list.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
+                listOfBooks = n.SelectMany(s => s.Books).Distinct().ToPagedList(page ?? 1, 10);
+
+                return View(listOfBooks);
+            }
+
             if (!string.IsNullOrEmpty(search))
             {
                 listOfBooks = this.unitOfWork.Books.Find(f => f.Name.ToLower().Contains(search) ||
@@ -39,16 +60,11 @@ namespace Library.App.Controllers
             {
                 listOfBooks = unitOfWork.Books.GetAll().OrderBy(string.Join(" ", orderBy, orderDirection)).ToPagedList(page ?? 1, 10);
             }
-            //OrderBy(string.Join(" ", orderBy, "desc")
-
-            ViewBag.PreviosOrderBy = orderBy;
-            ViewBag.PreviosOrderDirection = orderDirection;
 
             return View(listOfBooks);
         }
 
 
-        [AllowAnonymous]
         public ActionResult Details(int bookId)
         {
             var book = unitOfWork.Books.GetById(bookId);
@@ -67,13 +83,13 @@ namespace Library.App.Controllers
         [Authorize]
         public ActionResult CreateOrder(int bookId)
         {
-            
+
             return View();
         }
 
         public ActionResult AccountInfo(int userId)
         {
-            
+
             return PartialView("AccountInfoPartial");
         }
 

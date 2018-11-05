@@ -4,15 +4,16 @@
     ViewBag.Title = "Details";
 }
 
-<h2>@Html.DisplayFor(model => model.Name)</h2>
+<h1>@Html.DisplayFor(model => model.Name)</h1>
 
 <div>
-    @{ 
+    @{
         string authors = String.Join(", ", Model.Authors.Select(x => x.Name));
     }
 
-    <h4>by @authors</h4>
+    <h5>by @authors</h5>
     <hr />
+
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Description)
@@ -35,7 +36,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Publisher)
+            @Html.DisplayFor(model => model.Publisher.Name)
         </dd>
 
         <dt>
@@ -48,7 +49,19 @@
 
     </dl>
 </div>
-<p>
+<p class="text-center">
     @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-default" })
-    @Html.ActionLink("Order", "Order", new { id = Model.Id }, new { @class = "btn btn-success" })
+
+    @if (!(HttpContext.Current.User.IsInRole("Administrator") ||
+                            HttpContext.Current.User.IsInRole("Librarian")))
+    {
+        if (Model.Count == 0)
+        {
+            <button class="btn btn-danger" disabled="disabled" title="Temporarily unavailable">Order</button>
+        }
+        else
+        {
+            @Html.ActionLink("Order", "CreateOrder", new { bookId = Model.Id }, new { @class = "btn btn-success" })
+        }
+    }
 </p>

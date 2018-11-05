@@ -15,11 +15,14 @@ namespace Library.Infrastructure.Data
         private readonly LibraryDbContext dbContext;
         private IBookRepository booksRepository;
         private IOrderRepository ordersRepository;
-        //  TODO: mb need to make repo for Author
+        private IAuthorRepository authorRepository;
+        private IPublisherRepository publisherRepository;
         private bool disposed = false;
 
         public IBookRepository Books => this.booksRepository ?? (this.booksRepository = new BookRepository(this.dbContext));
         public IOrderRepository Orders => this.ordersRepository ?? (this.ordersRepository = new OrderRepository(this.dbContext));
+        public IAuthorRepository Authors => this.authorRepository ?? (this.authorRepository = new AuthorRepository(this.dbContext));
+        public IPublisherRepository Publishers => this.publisherRepository ?? (this.publisherRepository = new PublisherRepository(this.dbContext));
 
         public void Save()
         {
