@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Library.Infrastructure.Data.Repositories
 {
-    public class PublisherRepository : BaseRepository<Author>, IPublisherRepository
+    public class PublisherRepository : BaseRepository<Publisher>, IPublisherRepository
     {
         public PublisherRepository(LibraryDbContext context) : base(context)
         {
