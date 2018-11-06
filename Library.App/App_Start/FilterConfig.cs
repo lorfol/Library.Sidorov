@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Library.App.Logging;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Library.App
@@ -7,7 +8,8 @@ namespace Library.App
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new CustomHandleErrorAttribute());
+            filters.Add(new LogHttpRequest());
         }
     }
 }
