@@ -24,22 +24,20 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (HttpContext.Current.User.Identity.IsAuthenticated)
                     {
-                        if (HttpContext.Current.User.IsInRole("Administrator"))
+                        if (HttpContext.Current.User.IsInRole("admin"))
                         {
-                            <li>@Html.ActionLink("Admin Account", "MyAccount", "Account")</li>
-                            <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
+                            <li>@Html.ActionLink("Manage Users", "ManageUsers", "AdministratorAccount")</li>
+                            <li>@Html.ActionLink("Manage Librarians", "ManageLibrarians", "AdministratorAccount")</li>
                             <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
-                        else if (HttpContext.Current.User.IsInRole("Librarian"))
+                        else if (HttpContext.Current.User.IsInRole("librarian"))
                         {
-                            <li>@Html.ActionLink("Librarian Account", "MyAccount", "Account")</li>
-                            <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
+                            <li>@Html.ActionLink("Librarian Panel", "LibrarianTools", "LibrarianAccount")</li>
                             <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                         else
                         {
-                            <li>@Html.ActionLink("Your Account", "MyAccount", "Account")</li>
-                            <li>@Html.ActionLink("Orders", "Orders", "Home")</li>
+                            <li>@Html.ActionLink("My Account", "MyAccount", "UserAccount")</li>
                             <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                     }

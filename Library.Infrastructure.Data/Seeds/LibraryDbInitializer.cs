@@ -1,4 +1,6 @@
 ﻿using Library.Domain.Core.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,18 @@ namespace Library.Infrastructure.Data.Seeds
     {
         protected override void Seed(LibraryDbContext dbContext)
         {
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(dbContext));
+
+            var adminRole = new IdentityRole { Name = "admin" };
+            var librarianRole = new IdentityRole { Name = "librarian" };
+            var userRole = new IdentityRole { Name = "user" };
+            var bannedRole = new IdentityRole { Name = "banned" };
+
+            roleManager.Create(adminRole);
+            roleManager.Create(librarianRole);
+            roleManager.Create(userRole);
+            roleManager.Create(bannedRole);
+
             if (!dbContext.Authors.Any())
             {
                 string file = HostingEnvironment.MapPath(@"/Library.Infrastructure.Data/Seeds/JsonData/AuthorsStartData.json");

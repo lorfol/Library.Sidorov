@@ -11,14 +11,16 @@ namespace Library.App.ViewModels
 
         public int BookId { get; set; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public string Status { get; set; }
 
-        public DateTime TakenDate { get; set; }
+        public string TakenDate { get; set; }
 
-        public DateTime ReturnDate { get; set; }
+        public string ReturnDate { get; set; }
 
         public float LateFine { get; set; }
+
+        public bool IsInReadingRoom { get; set; }
     }
 }

@@ -43,6 +43,9 @@ namespace Library.App.Controllers
                     {
                         IsPersistent = true
                     }, claim);
+
+                    this.UserManager.AddToRole(user.Id, "user");
+
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -96,13 +99,6 @@ namespace Library.App.Controllers
         {
             AuthenticationManager.SignOut();
             return RedirectToAction("Login");
-        }
-
-        [Authorize]
-        public ActionResult MyAccount(User user)
-        {
-
-            return View();
         }
     }
 }

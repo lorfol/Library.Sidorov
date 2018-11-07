@@ -1,6 +1,7 @@
 ﻿using Library.Domain.Interfaces;
 using Library.Infrastructure.Data;
 using Ninject.Modules;
+using System.Web.ModelBinding;
 
 namespace Library.App.IoC
 {

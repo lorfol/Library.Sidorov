@@ -26,7 +26,7 @@ namespace Library.App.Controllers
 
         public ActionResult Index(string search, int? page, string orderBy = "Name", string orderDirection = "asc")
         {
-            //var books = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(listOfBooks);
+            //var books = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(listOfBooks); // TODO: mapping
 
             IPagedList<Book> listOfBooks;
 

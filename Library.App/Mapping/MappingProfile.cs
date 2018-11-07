@@ -13,8 +13,11 @@ namespace Library.App.Mapping
         public MappingProfile()
         {
             CreateMap<Book, BookViewModel>();
+
             CreateMap<Order, OrderViewModel>();
+
             CreateMap<User, UserViewModel>();
+
         }
     }
 }
