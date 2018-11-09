@@ -1,0 +1,21 @@
+﻿@using Library.App.ViewModels
+@model IEnumerable<OrderViewModel>
+
+@{
+    ViewBag.Title = "NewOrders";
+}
+
+<h2>New Orders</h2>
+
+@foreach (var item in Model)
+{
+    <div class="card">
+        <div class="card-body">
+            <p>@item.BookName</p>
+            <p>@item.UserId</p>
+            @Html.ActionLink("Reject", "RejectOrder", new { orderId = item.Id }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Confirm", "ConfirmOrder", new { orderId = item.Id }, new { @class = "btn btn-success" })
+        </div>
+    </div>
+}
+

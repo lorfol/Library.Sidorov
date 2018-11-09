@@ -1,0 +1,50 @@
+2018-11-09 15:54:23.1339|ERROR|Library.App.Logging.LibraryLogger|The view 'UserAccount' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/UserAccount/UserAccount.aspx
+~/Views/UserAccount/UserAccount.ascx
+~/Views/Shared/UserAccount.aspx
+~/Views/Shared/UserAccount.ascx
+~/Views/UserAccount/UserAccount.cshtml
+~/Views/UserAccount/UserAccount.vbhtml
+~/Views/Shared/UserAccount.cshtml
+~/Views/Shared/UserAccount.vbhtml
+2018-11-09 15:54:35.2004|ERROR|Library.App.Logging.LibraryLogger|The view 'UserOrders' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/UserAccount/UserOrders.aspx
+~/Views/UserAccount/UserOrders.ascx
+~/Views/Shared/UserOrders.aspx
+~/Views/Shared/UserOrders.ascx
+~/Views/UserAccount/UserOrders.cshtml
+~/Views/UserAccount/UserOrders.vbhtml
+~/Views/Shared/UserOrders.cshtml
+~/Views/Shared/UserOrders.vbhtml
+2018-11-09 17:30:41.2028|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'PagedList.IPagedList`1[Library.App.ViewModels.BookViewModel]'.
+2018-11-09 17:31:54.0540|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'PagedList.IPagedList`1[Library.App.ViewModels.BookViewModel]'.
+2018-11-09 17:31:58.4419|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'PagedList.IPagedList`1[Library.App.ViewModels.BookViewModel]'.
+2018-11-09 17:32:17.5993|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'PagedList.IPagedList`1[Library.App.ViewModels.BookViewModel]'.
+2018-11-09 17:32:41.8407|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'PagedList.IPagedList`1[Library.App.ViewModels.BookViewModel]'.
+2018-11-09 17:33:46.3832|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'PagedList.IPagedList`1[Library.App.ViewModels.BookViewModel]'.
+2018-11-09 17:48:30.2955|ERROR|Library.App.Logging.LibraryLogger|Error mapping types.
+
+Mapping types:
+IPagedList`1 -> IPagedList`1
+PagedList.IPagedList`1[[Library.Domain.Core.Models.Book, Library.Domain.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> PagedList.IPagedList`1[[Library.App.ViewModels.BookViewModel, Library.App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2018-11-09 18:26:10.9140|ERROR|Library.App.Logging.LibraryLogger|The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+2018-11-09 18:32:59.6338|ERROR|Library.App.Logging.LibraryLogger|The "RenderBody" method has not been called for layout page "~/Views/Shared/_Layout.cshtml".
+2018-11-09 18:55:18.4442|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'PagedList.PagedList`1[Library.App.ViewModels.BookViewModel]', but this dictionary requires a model item of type 'Library.Domain.Core.Models.User'.
+2018-11-09 19:00:31.4378|ERROR|Library.App.Logging.LibraryLogger|D:\VS_Projects\Library\Library.App\Views\Shared\_Layout.cshtml(40): error CS1001: Identifier expected
+2018-11-09 19:45:47.5826|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-09 20:01:23.1557|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Data.Entity.DynamicProxies.Book_419B2FA3A88F60BD5A98152CB4A4C9B2F25C6788E4231AEB5105D520562E7219', but this dictionary requires a model item of type 'Library.App.ViewModels.BookViewModel'.
+2018-11-09 20:02:35.8945|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Data.Entity.DynamicProxies.Book_419B2FA3A88F60BD5A98152CB4A4C9B2F25C6788E4231AEB5105D520562E7219', but this dictionary requires a model item of type 'Library.App.ViewModels.BookViewModel'.
+2018-11-09 21:11:12.6658|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'bookId' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult CreateBookOrder(Int32)' in 'Library.App.Controllers.OrderController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-09 21:13:04.0604|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'System.Data.Entity.DynamicProxies.Book_419B2FA3A88F60BD5A98152CB4A4C9B2F25C6788E4231AEB5105D520562E7219', but this dictionary requires a model item of type 'Library.App.ViewModels.BookViewModel'.
+2018-11-09 21:18:21.3590|ERROR|Library.App.Logging.LibraryLogger|D:\VS_Projects\Library\Library.App\Views\Home\Index.cshtml(159): error CS0833: An anonymous type cannot have multiple properties with the same name
+2018-11-09 22:34:13.6314|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-09 22:48:38.5138|ERROR|Library.App.Logging.LibraryLogger|The view 'ConfirmedOrders' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/LibrarianAccount/ConfirmedOrders.aspx
+~/Views/LibrarianAccount/ConfirmedOrders.ascx
+~/Views/Shared/ConfirmedOrders.aspx
+~/Views/Shared/ConfirmedOrders.ascx
+~/Views/LibrarianAccount/ConfirmedOrders.cshtml
+~/Views/LibrarianAccount/ConfirmedOrders.vbhtml
+~/Views/Shared/ConfirmedOrders.cshtml
+~/Views/Shared/ConfirmedOrders.vbhtml

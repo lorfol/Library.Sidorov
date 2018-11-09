@@ -32,12 +32,15 @@
                         }
                         else if (HttpContext.Current.User.IsInRole("librarian"))
                         {
-                            <li>@Html.ActionLink("Librarian Panel", "LibrarianTools", "LibrarianAccount")</li>
+                            <li>@Html.ActionLink("New orders", "NewOrders", "LibrarianAccount")</li>
+                            <li>@Html.ActionLink("Confirmed orders", "ConfirmedOrders", "LibrarianAccount")</li>
                             <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                         else
                         {
-                            <li>@Html.ActionLink("My Account", "MyAccount", "UserAccount")</li>
+
+                            <li>@Html.ActionLink(HttpContext.Current.User.Identity.Name, "UserAccount", "UserAccount", new { userName = HttpContext.Current.User.Identity.Name }, null)</li>
+                            <li>@Html.ActionLink("My Orders", "UserOrders", "UserAccount", new { userName = HttpContext.Current.User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Sign Out", "Logout", "Account")</li>
                         }
                     }
@@ -52,12 +55,23 @@
     </div>
 
     <div class="container body-content">
-        @RenderBody()
+        @if (!HttpContext.Current.User.IsInRole("banned"))
+        {
+            @RenderBody()
+        }
+        else // TODO: ban view
+        {
+            <div class="jumbotron">
+                You was banned.
+                To contact the administrator write on this Email - [admin@gmail.com]
+            </div>
+        }
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

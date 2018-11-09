@@ -26,77 +26,59 @@ namespace Library.App.Controllers
 
         public ActionResult Index(string search, int? page, string orderBy = "Name", string orderDirection = "asc")
         {
-            //var books = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(listOfBooks); // TODO: mapping
-
-            IPagedList<Book> listOfBooks;
+            IPagedList<BookViewModel> listOfBooks;
 
             ViewBag.PreviosOrderBy = orderBy;
             ViewBag.PreviosOrderDirection = orderDirection;
 
             if (orderBy == "Author")
             {
-                var list = this.unitOfWork.Books.GetAll().SelectMany(b => b.Authors).ToList();
-                var n = list.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
-                listOfBooks = n.SelectMany(s => s.Books).Distinct().ToPagedList(page ?? 1, 10);
+                var authors = this.unitOfWork.Books.GetAll().SelectMany(b => b.Authors).ToList();
+                var orderedAuthors = authors.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
+                var unicAuthors = orderedAuthors.SelectMany(s => s.Books).Distinct();
+                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(unicAuthors).ToPagedList(page ?? 1, 10);
 
                 return View(listOfBooks);
             }
 
             if (orderBy == "Publisher")
             {
-                var list = this.unitOfWork.Books.GetAll().Select(b => b.Publisher).ToList();
-                var n = list.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
-                listOfBooks = n.SelectMany(s => s.Books).Distinct().ToPagedList(page ?? 1, 10);
+                var publishers = this.unitOfWork.Books.GetAll().Select(b => b.Publisher).ToList();
+                var orderedPublishers = publishers.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
+                var unicPublichers = orderedPublishers.SelectMany(s => s.Books).Distinct();
+                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(unicPublichers).ToPagedList(page ?? 1, 10);
 
                 return View(listOfBooks);
             }
 
             if (!string.IsNullOrEmpty(search))
             {
-                listOfBooks = this.unitOfWork.Books.Find(f => f.Name.ToLower().Contains(search) ||
+                var books = this.unitOfWork.Books.Find(f => f.Name.ToLower().Contains(search) ||
                 f.Authors.Select(z => z).Any(g => g.Name.ToLower().Contains(search))).OrderBy(string.Join(" ", orderBy, orderDirection)).ToPagedList(page ?? 1, 10);
+                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(books).ToPagedList(page ?? 1, 10);
+
+                return View(listOfBooks);
             }
             else
             {
-                listOfBooks = unitOfWork.Books.GetAll().OrderBy(string.Join(" ", orderBy, orderDirection)).ToPagedList(page ?? 1, 10);
+                var books = unitOfWork.Books.GetAll().OrderBy(string.Join(" ", orderBy, orderDirection)).ToList();
+                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(books).ToPagedList(page ?? 1, 10);
+                return View(listOfBooks);
             }
-
-            return View(listOfBooks);
         }
 
 
         public ActionResult Details(int bookId)
         {
-            var book = unitOfWork.Books.GetById(bookId);
-            if (book != null)
+            var bookFromDb = unitOfWork.Books.GetById(bookId);
+
+            if (bookFromDb != null)
+            {
+                var book = Mapper.Map<Book, BookViewModel>(bookFromDb);
                 return View("Details", book);
+            }
+
             return HttpNotFound();
-        }
-
-        [Authorize]
-        public ActionResult Orders()
-        {
-            var orders = unitOfWork.Orders.GetAll(); // TODO: not all orders. only current user orders
-            return View(orders);
-        }
-
-        [Authorize]
-        public ActionResult CreateOrder(int bookId)
-        {
-
-            return View();
-        }
-
-        public ActionResult AccountInfo(int userId)
-        {
-
-            return PartialView("AccountInfoPartial");
-        }
-
-        public ActionResult MyOrders(int userId)
-        {
-
-            return PartialView("MyOrdersPartial");
         }
     }
 }

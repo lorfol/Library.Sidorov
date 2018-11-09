@@ -139,3 +139,12 @@
 ~/Views/AdministratorAccount/UpdateBook.vbhtml
 ~/Views/Shared/UpdateBook.cshtml
 ~/Views/Shared/UpdateBook.vbhtml
+2018-11-07 19:36:24.2124|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateOrder' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Home/CreateOrder.aspx
+~/Views/Home/CreateOrder.ascx
+~/Views/Shared/CreateOrder.aspx
+~/Views/Shared/CreateOrder.ascx
+~/Views/Home/CreateOrder.cshtml
+~/Views/Home/CreateOrder.vbhtml
+~/Views/Shared/CreateOrder.cshtml
+~/Views/Shared/CreateOrder.vbhtml

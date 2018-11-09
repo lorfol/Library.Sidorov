@@ -1,4 +1,6 @@
-﻿@model Library.Domain.Core.Models.Book
+﻿
+@using Library.App.ViewModels
+@model BookViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -7,11 +9,7 @@
 <h1>@Html.DisplayFor(model => model.Name)</h1>
 
 <div>
-    @{
-        string authors = String.Join(", ", Model.Authors.Select(x => x.Name));
-    }
-
-    <h5>by @authors</h5>
+    <h5>written by @Model.Author</h5>
     <hr />
 
     <dl class="dl-horizontal">
@@ -36,15 +34,15 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Publisher.Name)
+            @Html.DisplayFor(model => model.Publisher)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PublicationDate)
+            Publication year
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PublicationDate.Year)
+            @Html.DisplayFor(model => model.PublicationYear)
         </dd>
 
     </dl>
@@ -69,7 +67,7 @@
             }
             else
             {
-                @Html.ActionLink("Order", "CreateOrder", new { bookId = Model.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = Model.Id }, new { @class = "btn btn-success viewDialog" } )
             }
         }
     </div>
