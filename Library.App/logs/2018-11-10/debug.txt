@@ -1,0 +1,675 @@
+2018-11-10 14:55:57.0960|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 14:56:03.3233|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 14:56:03.3473|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 14:56:16.1442|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 14:55:50
+-----------------
+2018-11-10 14:58:06.5345|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 14:58:06.6395|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 14:58:06.6775|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 14:58:08.6505|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 14:58:05
+-----------------
+2018-11-10 15:02:19.3214|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:02:19.3865|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:02:19.4055|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:02:20.9454|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:02:18
+-----------------
+2018-11-10 15:03:22.6578|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:03:22.7278|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:03:22.7438|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:03:24.1068|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:03:22
+-----------------
+2018-11-10 15:38:33.7770|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 15:38:35.9380|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:38:35.9599|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:38:45.4695|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:38:32
+-----------------
+2018-11-10 15:38:49.8797|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:38:50.0518|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:38:50.0677|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:38:51.0637|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:38:49
+-----------------
+2018-11-10 15:39:33.5993|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=0
+2018-11-10 15:39:33.6173|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:39:33.6343|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:39:33.6553|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:39:33
+-----------------
+2018-11-10 15:40:06.2749|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:40:06.3009|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:40:06.3189|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:40:07.3469|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:40:06
+-----------------
+2018-11-10 15:41:02.0863|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:41:02.1333|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:41:02.1653|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:41:03.8263|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:41:01
+-----------------
+2018-11-10 15:41:18.5480|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:41:18.5690|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:41:18.5880|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:41:19.8452|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:41:18
+-----------------
+2018-11-10 15:41:55.7809|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:41:55.8239|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:41:55.8609|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:41:57.1699|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:41:55
+-----------------
+2018-11-10 15:43:34.3907|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:43:34.4177|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:43:34.4347|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:43:37.0426|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:43:34
+-----------------
+2018-11-10 15:44:47.2707|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 15:44:55.5314|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:44:55.5574|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:45:01.9004|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:44:45
+-----------------
+2018-11-10 15:45:27.1668|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 15:45:27.3348|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 15:45:27.3568|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 15:45:28.3058|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 15:45:26
+-----------------
+2018-11-10 16:06:16.1957|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:06:16.1957|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:06:20.5687|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:06:20.5687|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:06:20.6167|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:06:20.5967|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 16:06:31.8741|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:06:13
+-----------------
+2018-11-10 16:06:31.8741|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:06:13
+-----------------
+2018-11-10 16:06:44.6160|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login?ReturnUrl=%2FOrder%2FCreateBookOrder%3FbookId%3D8
+2018-11-10 16:06:44.6440|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:06:44.6670|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 16:06:46.6300|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:06:44
+-----------------
+2018-11-10 16:07:03.4627|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login?ReturnUrl=%2FOrder%2FCreateBookOrder%3FbookId%3D8
+2018-11-10 16:07:04.1127|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:07:04.1337|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 16:07:04.1697|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:07:03
+-----------------
+2018-11-10 16:07:14.0643|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login?ReturnUrl=%2FOrder%2FCreateBookOrder%3FbookId%3D8
+2018-11-10 16:07:14.9563|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:07:14.9763|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 16:07:15.1603|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:07:13
+-----------------
+2018-11-10 16:07:15.3983|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8
+2018-11-10 16:12:51.9216|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:12:55.2679|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:12:55.3379|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:13:03.0279|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:12:49
+-----------------
+2018-11-10 16:13:11.8406|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:13:12.0826|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:13:12.1156|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:13:13.1576|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:13:11
+-----------------
+2018-11-10 16:13:25.9578|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:13:26.7807|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:13:26.8027|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:13:26.8378|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:13:25
+-----------------
+2018-11-10 16:13:48.6557|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:13:48.7617|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:13:48.7937|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:13:48.8267|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:13:48
+-----------------
+2018-11-10 16:17:05.6586|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:17:07.5736|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:17:07.5996|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:17:12.4258|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:17:03
+-----------------
+2018-11-10 16:19:20.9936|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:19:21.1106|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:19:21.1356|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:19:22.6445|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:19:20
+-----------------
+2018-11-10 16:19:44.0089|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:19:44.1389|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:19:44.1619|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:19:45.5727|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:19:43
+-----------------
+2018-11-10 16:19:50.8806|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:19:51.0286|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:19:51.0516|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:19:51.1306|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:19:50
+-----------------
+2018-11-10 16:20:25.0848|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:20:25.1118|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:20:25.1328|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:20:26.5428|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:20:24
+-----------------
+2018-11-10 16:20:30.5892|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 16:20:30.8022|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:22:44.5577|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 16:22:44.5577|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:22:44.5577|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:22:54.0379|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:22:54.0379|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:22:54.0969|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:22:54.0669|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:22:55.7899|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:22:55.8109|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:22:55.8359|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:22:42
+-----------------
+2018-11-10 16:23:00.8549|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:22:42
+-----------------
+2018-11-10 16:23:00.8549|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:22:42
+-----------------
+2018-11-10 16:23:06.8678|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/ConfirmedOrders
+2018-11-10 16:23:07.0238|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:23:07.0438|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:23:07.0687|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:23:06
+-----------------
+2018-11-10 16:23:11.8519|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:23:11.8819|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:23:11.9049|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:23:12.8810|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:23:11
+-----------------
+2018-11-10 16:23:16.0124|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=6&userName=user2%40m.ua
+2018-11-10 16:23:16.0424|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:23:16.0674|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:23:16.0964|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:23:15
+-----------------
+2018-11-10 16:28:37.7336|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:28:37.7665|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:28:37.7886|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:28:39.2045|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:28:37
+-----------------
+2018-11-10 16:28:49.7668|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=6&userName=user2%40m.ua
+2018-11-10 16:28:49.8128|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:28:49.8468|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:28:49.8738|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:28:49
+-----------------
+2018-11-10 16:28:52.0179|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=6&userName=user2%40m.ua
+2018-11-10 16:28:52.0449|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:28:52.0699|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:28:52.0899|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:28:52
+-----------------
+2018-11-10 16:28:53.5367|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=6&userName=user2%40m.ua
+2018-11-10 16:28:53.5697|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:28:53.6037|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:28:53.6327|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:28:53
+-----------------
+2018-11-10 16:29:00.2594|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 16:29:00.2954|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:29:00.3244|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:29:00.3524|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:29:00
+-----------------
+2018-11-10 16:29:19.2356|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=3&userName=user2%40m.ua
+2018-11-10 16:29:19.3136|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:29:19.3686|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:29:19.4036|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:29:19
+-----------------
+2018-11-10 16:29:50.9000|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:29:50.9370|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:29:50.9750|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:29:51.0510|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:29:50
+-----------------
+2018-11-10 16:52:23.4517|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:52:23.4517|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:52:27.7026|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:52:27.7026|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:52:27.7596|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:52:27.7406|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:52:38.9065|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:52:20
+-----------------
+2018-11-10 16:52:38.9065|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:52:20
+-----------------
+2018-11-10 16:52:46.5028|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:52:46.7568|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:52:46.8028|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:52:47.8098|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:52:46
+-----------------
+2018-11-10 16:52:58.3267|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 16:55:09.8118|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:57:54.1445|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:57:57.6625|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:57:57.6895|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:58:05.7704|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:57:51
+-----------------
+2018-11-10 16:58:18.3419|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 16:58:18.6159|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:58:18.6419|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 16:58:19.6598|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:58:18
+-----------------
+2018-11-10 16:58:21.0008|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:58:21.9428|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 16:58:21.9658|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 16:58:22.0058|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:58:20
+-----------------
+2018-11-10 16:58:24.0959|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 16:59:50.8594|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 16:59:50.8594|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 17:00:39.5389|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:00:39.5819|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:00:50.8986|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:00:50.9306|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 17:00:50.9696|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:59:47
+-----------------
+2018-11-10 17:00:55.9096|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 16:59:47
+-----------------
+2018-11-10 17:01:02.1622|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:01:05.3766|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:01:29.0167|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:01:58.0480|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:02:05.6416|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 17:02:06.4816|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:02:06.5016|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:02:06.5296|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:02:05
+-----------------
+2018-11-10 17:02:56.5795|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 17:02:57.8904|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:02:57.9174|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 17:02:57.9544|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:02:55
+-----------------
+2018-11-10 17:02:59.4734|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/ConfirmedOrders
+2018-11-10 17:02:59.6164|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:02:59.6414|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:02:59.6724|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:02:58
+-----------------
+2018-11-10 17:03:03.3648|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:04:26.1075|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 17:04:29.7575|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:04:29.7895|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:04:37.9619|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:04:23
+-----------------
+2018-11-10 17:04:42.6900|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:04:52.6801|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:04:52.7051|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:04:53.9221|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:04:42
+-----------------
+2018-11-10 17:05:03.1908|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=6&userName=user2%40m.ua
+2018-11-10 17:05:09.1609|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:05:09.2009|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 17:05:09.2269|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:05:03
+-----------------
+2018-11-10 17:05:27.6980|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder
+2018-11-10 17:05:27.7240|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:06:14.8862|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder
+2018-11-10 17:06:14.9102|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:07:09.5456|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:08:02.0403|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 17:08:05.3533|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:08:05.3823|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:08:13.3183|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:07:59
+-----------------
+2018-11-10 17:08:20.4936|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:08:20.8676|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:08:20.8886|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:08:21.8465|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:08:20
+-----------------
+2018-11-10 17:08:26.3957|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder
+2018-11-10 17:08:26.4227|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:14:31.3555|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:14:33.9055|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:14:33.9445|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:14:39.1954|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:14:28
+-----------------
+2018-11-10 17:17:23.0195|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 17:17:26.3280|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:17:26.3630|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:17:33.8969|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:17:20
+-----------------
+2018-11-10 17:17:39.9814|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:17:40.3753|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:17:40.3973|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:17:41.4703|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:17:39
+-----------------
+2018-11-10 17:17:51.8662|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder
+2018-11-10 17:17:51.8992|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:19:38.9543|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder
+2018-11-10 17:19:38.9933|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:25:59.8750|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:26:03.0309|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:26:03.0629|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:26:10.0719|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:25:57
+-----------------
+2018-11-10 17:26:11.0349|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:26:11.2058|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:26:11.2509|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:26:11.2858|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:26:10
+-----------------
+2018-11-10 17:27:24.9994|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 17:27:28.8085|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:27:28.8605|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:27:37.5315|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:27:21
+-----------------
+2018-11-10 17:27:41.8875|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/ConfirmedOrders
+2018-11-10 17:27:42.3717|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:27:42.3966|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:27:42.4316|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:27:41
+-----------------
+2018-11-10 17:27:46.2955|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:27:46.5705|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:27:46.6095|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:27:47.8324|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:27:46
+-----------------
+2018-11-10 17:32:41.2264|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 17:32:41.6244|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:32:41.6444|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:32:53.5401|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:32:40
+-----------------
+2018-11-10 17:33:00.1058|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=1
+2018-11-10 17:33:47.4730|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 17:33:47.5090|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 17:33:47.5920|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 17:32:59
+-----------------
+2018-11-10 20:49:33.5426|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 20:49:41.8881|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:49:42.0052|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:49:49.5054|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:49:25
+-----------------
+2018-11-10 20:50:01.8084|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 20:50:03.8004|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:50:03.8734|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 20:50:04.9224|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:49:59
+-----------------
+2018-11-10 20:50:14.7301|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 20:50:14.8691|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:50:14.9311|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 20:50:49.6104|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 20:50:49.7144|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:50:49.7464|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 20:50:50.3024|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 20:50:50.3364|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:50:50.3684|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 20:50:53.9655|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:50:49
+-----------------
+2018-11-10 20:50:53.9925|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:50:50
+-----------------
+2018-11-10 20:50:54.0105|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:50:14
+-----------------
+2018-11-10 20:51:11.0359|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 20:51:12.8989|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:51:12.9309|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 20:51:13.1629|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:51:10
+-----------------
+2018-11-10 20:51:13.4338|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 20:51:14.2918|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:51:14.3238|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 20:51:14.3608|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:51:13
+-----------------
+2018-11-10 20:52:01.0011|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=2
+2018-11-10 20:52:09.0117|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:52:09.0317|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:52:09.0607|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:52:00
+-----------------
+2018-11-10 20:52:14.8273|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 20:52:15.0933|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:52:15.1233|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:52:15.1673|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:52:14
+-----------------
+2018-11-10 20:54:32.6120|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 20:54:34.7580|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:54:34.7880|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:54:44.0131|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:54:30
+-----------------
+2018-11-10 20:56:34.0263|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 20:56:34.0263|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 20:56:44.0647|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:56:44.0647|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:56:44.0967|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 20:56:44.1297|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:56:52.4037|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:56:31
+-----------------
+2018-11-10 20:56:52.4037|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:56:31
+-----------------
+2018-11-10 20:57:02.3358|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 20:57:02.5818|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:57:02.6438|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:57:03.9798|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:57:02
+-----------------
+2018-11-10 20:57:20.6918|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=1
+2018-11-10 20:57:21.6088|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:57:21.6398|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:57:21.6658|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:57:20
+-----------------
+2018-11-10 20:57:23.7798|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 20:57:23.8118|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:57:23.8358|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:57:23.8698|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:57:23
+-----------------
+2018-11-10 20:57:36.5719|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 20:57:37.1279|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:57:37.1729|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 20:57:37.1979|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:57:36
+-----------------
+2018-11-10 20:57:58.9745|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 20:57:59.0205|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 20:57:59.0515|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 20:57:59.0935|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 20:57:58
+-----------------
+2018-11-10 21:02:40.3258|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:02:40.3258|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:02:42.4698|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:02:42.4698|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:02:42.5248|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:02:42.5028|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:02:50.9207|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:02:38
+-----------------
+2018-11-10 21:02:50.9207|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:02:38
+-----------------
+2018-11-10 21:02:51.7963|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:02:52.4568|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:02:52.5038|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:02:52.5568|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:02:51
+-----------------
+2018-11-10 21:03:00.0526|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:03:00.2696|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:00.3036|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:03:01.3606|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:02:59
+-----------------
+2018-11-10 21:03:05.7414|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=3
+2018-11-10 21:03:05.8584|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:05.8774|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:03:05.9014|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:05
+-----------------
+2018-11-10 21:03:07.8155|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:03:07.8505|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:07.8745|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:03:07.9015|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:07
+-----------------
+2018-11-10 21:03:11.0525|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:03:11.4155|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:11.4555|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:03:11.4845|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:10
+-----------------
+2018-11-10 21:03:21.3019|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:03:21.3459|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:21.3679|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:03:21.4049|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:21
+-----------------
+2018-11-10 21:03:23.7405|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=2
+2018-11-10 21:03:23.8314|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:23.8494|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:03:23.8674|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:23
+-----------------
+2018-11-10 21:03:25.4767|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:03:25.5057|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:25.5307|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:03:25.5607|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:25
+-----------------
+2018-11-10 21:03:32.9446|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:03:33.0296|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:03:33.1256|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:03:33.1616|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:03:32
+-----------------
+2018-11-10 21:05:24.7301|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:05:24.7301|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:05:33.7880|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:05:33.7880|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:05:33.8190|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:05:33.8460|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:05:41.7739|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:05:21
+-----------------
+2018-11-10 21:05:41.7739|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:05:22
+-----------------
+2018-11-10 21:05:48.8803|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:05:49.1473|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:05:49.1773|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:05:50.4848|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:05:48
+-----------------
+2018-11-10 21:05:57.8598|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=4
+2018-11-10 21:05:58.5888|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:05:58.6098|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:05:58.6328|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:05:57
+-----------------
+2018-11-10 21:05:59.3437|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=5
+2018-11-10 21:05:59.4627|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:05:59.4907|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:05:59.5257|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:05:59
+-----------------
+2018-11-10 21:06:00.5567|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:06:00.5937|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:00.6447|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:06:00.6877|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:06:00
+-----------------
+2018-11-10 21:06:06.0137|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login?ReturnUrl=%2FOrder%2FCreateBookOrder%3FbookId%3D8
+2018-11-10 21:06:06.0567|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:06.0937|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:06:07.8273|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:06:05
+-----------------
+2018-11-10 21:06:22.1270|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login?ReturnUrl=%2FOrder%2FCreateBookOrder%3FbookId%3D8
+2018-11-10 21:06:23.4679|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:23.5009|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:06:23.5499|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:06:22
+-----------------
+2018-11-10 21:06:23.6510|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8
+2018-11-10 21:06:23.7159|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:49.5710|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login?ReturnUrl=%2FOrder%2FCreateBookOrder%3FbookId%3D8
+2018-11-10 21:06:49.6010|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:49.6380|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:06:49.7140|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:06:49
+-----------------
+2018-11-10 21:06:53.4582|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:06:53.5732|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:53.6912|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:06:53.7382|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:06:53
+-----------------
+2018-11-10 21:06:58.2522|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/UserAccount/UserAccount?userName=user2%40m.ua
+2018-11-10 21:06:58.3562|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:06:58.4022|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:07:00.0862|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:06:58
+-----------------
+2018-11-10 21:07:02.2080|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:07:02.3030|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:02.3570|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:07:02.4300|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:07:02
+-----------------
+2018-11-10 21:07:05.9071|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:07:06.1661|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:25.2664|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=6&userName=user2%40m.ua
+2018-11-10 21:07:25.3494|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:33.7162|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Logout
+2018-11-10 21:07:33.7542|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:33.8012|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:07:33.8732|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:07:33
+-----------------
+2018-11-10 21:07:34.2262|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 21:07:34.2562|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:34.2892|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:07:34.3252|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:07:33
+-----------------
+2018-11-10 21:07:43.0296|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 21:07:43.1776|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:43.2106|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:07:43.2456|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:07:42
+-----------------
+2018-11-10 21:07:43.3126|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:07:43.4086|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:43.4336|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:07:43.4656|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:07:43
+-----------------
+2018-11-10 21:07:45.4859|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:07:45.5619|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:59.5873|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:07:59.7003|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:07:59.7873|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:07:59.8233|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:07:59
+-----------------
+2018-11-10 21:08:05.4886|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Home/Details?bookId=8
+2018-11-10 21:08:05.5446|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:08:05.5686|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:08:05.7306|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:08:05
+-----------------
+2018-11-10 21:08:07.8929|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:08:07.9719|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:08:38.8333|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:08:38.9213|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:09:40.1262|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:09:40.1282|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:09:45.9227|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:09:45.9807|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:09:45.9237|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:09:46.0457|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:09:50.7105|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:09:36
+-----------------
+2018-11-10 21:09:50.7105|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:09:36
+-----------------
+2018-11-10 21:09:57.0524|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:09:57.4764|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:09:57.5034|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:09:57.6364|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:09:56
+-----------------
+2018-11-10 21:10:11.0967|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=6
+2018-11-10 21:10:11.5302|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:11.5552|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:10:11.5972|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:10
+-----------------
+2018-11-10 21:10:12.4962|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=7
+2018-11-10 21:10:12.6462|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:12.6712|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:10:12.6972|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:12
+-----------------
+2018-11-10 21:10:13.2651|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=8
+2018-11-10 21:10:13.4331|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:13.4551|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:10:13.4801|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:13
+-----------------
+2018-11-10 21:10:13.8641|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=9
+2018-11-10 21:10:13.9951|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:14.0241|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:10:14.0581|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:13
+-----------------
+2018-11-10 21:10:14.5071|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/RejectOrder?orderId=10
+2018-11-10 21:10:14.6631|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:14.6971|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:10:14.7261|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:14
+-----------------
+2018-11-10 21:10:15.5391|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/LibrarianAccount/NewOrders
+2018-11-10 21:10:15.6261|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:15.6531|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:10:15.6911|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:15
+-----------------
+2018-11-10 21:10:20.9721|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 21:10:21.0221|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:21.0491|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:10:21.7471|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:20
+-----------------
+2018-11-10 21:10:29.3475|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Account/Login
+2018-11-10 21:10:30.6155|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:30.6525|DEBUG|Library.App.Logging.LibraryLogger|Current User: 
+2018-11-10 21:10:30.7795|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:29
+-----------------
+2018-11-10 21:10:31.0415|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:10:32.1415|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:10:32.1665|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:10:32.2075|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:10:30
+-----------------
+2018-11-10 21:10:35.5875|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:14:36.1158|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:14:36.1158|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/
+2018-11-10 21:14:36.1158|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:14:54.9795|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:14:55.0575|DEBUG|Library.App.Logging.LibraryLogger|Current User: user4@m.ua
+2018-11-10 21:14:54.9915|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:14:55.1435|DEBUG|Library.App.Logging.LibraryLogger|Current User: user2@m.ua
+2018-11-10 21:15:37.6044|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:15:45.9239|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:14:32
+-----------------
+2018-11-10 21:15:45.9239|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 10.11.2018 21:14:32
+-----------------
+2018-11-10 21:15:57.0366|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua
+2018-11-10 21:17:36.9351|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-10 21:17:41.4427|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/Order/CreateBookOrder?bookId=8&userName=user2%40m.ua

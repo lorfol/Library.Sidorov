@@ -1,0 +1,69 @@
+2018-11-10 15:39:33.6843|ERROR|Library.App.Logging.LibraryLogger|The view 'RejectOrder' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/LibrarianAccount/RejectOrder.aspx
+~/Views/LibrarianAccount/RejectOrder.ascx
+~/Views/Shared/RejectOrder.aspx
+~/Views/Shared/RejectOrder.ascx
+~/Views/LibrarianAccount/RejectOrder.cshtml
+~/Views/LibrarianAccount/RejectOrder.vbhtml
+~/Views/Shared/RejectOrder.cshtml
+~/Views/Shared/RejectOrder.vbhtml
+2018-11-10 16:20:30.8272|ERROR|Library.App.Logging.LibraryLogger|The model item passed into the dictionary is of type 'Library.Domain.Core.Models.Order', but this dictionary requires a model item of type 'Library.App.ViewModels.OrderViewModel'.
+2018-11-10 16:23:07.0957|ERROR|Library.App.Logging.LibraryLogger|The view 'ConfirmedOrders' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/LibrarianAccount/ConfirmedOrders.aspx
+~/Views/LibrarianAccount/ConfirmedOrders.ascx
+~/Views/Shared/ConfirmedOrders.aspx
+~/Views/Shared/ConfirmedOrders.ascx
+~/Views/LibrarianAccount/ConfirmedOrders.cshtml
+~/Views/LibrarianAccount/ConfirmedOrders.vbhtml
+~/Views/Shared/ConfirmedOrders.cshtml
+~/Views/Shared/ConfirmedOrders.vbhtml
+2018-11-10 16:55:09.8748|ERROR|Library.App.Logging.LibraryLogger|An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+2018-11-10 17:01:05.4686|ERROR|Library.App.Logging.LibraryLogger|Error mapping types.
+
+Mapping types:
+IEnumerable`1 -> IEnumerable`1
+System.Collections.Generic.IEnumerable`1[[Library.Domain.Core.Models.Order, Library.Domain.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Library.App.ViewModels.OrderViewModel, Library.App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2018-11-10 17:01:58.0840|ERROR|Library.App.Logging.LibraryLogger|Error mapping types.
+
+Mapping types:
+IEnumerable`1 -> IEnumerable`1
+System.Collections.Generic.IEnumerable`1[[Library.Domain.Core.Models.Order, Library.Domain.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Library.App.ViewModels.OrderViewModel, Library.App, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2018-11-10 17:02:59.7224|ERROR|Library.App.Logging.LibraryLogger|The view 'ConfirmedOrders' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/LibrarianAccount/ConfirmedOrders.aspx
+~/Views/LibrarianAccount/ConfirmedOrders.ascx
+~/Views/Shared/ConfirmedOrders.aspx
+~/Views/Shared/ConfirmedOrders.ascx
+~/Views/LibrarianAccount/ConfirmedOrders.cshtml
+~/Views/LibrarianAccount/ConfirmedOrders.vbhtml
+~/Views/Shared/ConfirmedOrders.cshtml
+~/Views/Shared/ConfirmedOrders.vbhtml
+2018-11-10 17:05:27.7520|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'orderId' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult RejectOrder(Int32)' in 'Library.App.Controllers.LibrarianAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-10 17:06:14.9392|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'orderId' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult RejectOrder(Int32)' in 'Library.App.Controllers.LibrarianAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-10 17:08:26.4537|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'orderId' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult RejectOrder(Int32)' in 'Library.App.Controllers.LibrarianAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-10 17:14:44.1744|ERROR|Library.App.Logging.LibraryLogger|Недопустимый примитив JSON: orderId.
+2018-11-10 17:17:43.5520|ERROR|Library.App.Logging.LibraryLogger|Недопустимый примитив JSON: orderId.
+2018-11-10 17:17:51.9252|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'orderId' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult RejectOrder(Int32)' in 'Library.App.Controllers.LibrarianAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-10 17:19:19.9938|ERROR|Library.App.Logging.LibraryLogger|Недопустимый примитив JSON: orderId.
+2018-11-10 17:19:39.0293|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'orderId' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult RejectOrder(Int32)' in 'Library.App.Controllers.LibrarianAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-10 17:27:42.4756|ERROR|Library.App.Logging.LibraryLogger|The view 'ConfirmedOrders' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/LibrarianAccount/ConfirmedOrders.aspx
+~/Views/LibrarianAccount/ConfirmedOrders.ascx
+~/Views/Shared/ConfirmedOrders.aspx
+~/Views/Shared/ConfirmedOrders.ascx
+~/Views/LibrarianAccount/ConfirmedOrders.cshtml
+~/Views/LibrarianAccount/ConfirmedOrders.vbhtml
+~/Views/Shared/ConfirmedOrders.cshtml
+~/Views/Shared/ConfirmedOrders.vbhtml
+2018-11-10 21:06:23.7619|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:07:06.2161|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:07:25.3954|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:07:45.5869|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:08:07.9929|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:08:38.9493|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:15:37.7664|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 21:17:36.9961|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.

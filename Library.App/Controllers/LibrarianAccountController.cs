@@ -22,7 +22,7 @@ namespace Library.App.Controllers
 
         public ActionResult NewOrders()
         {
-            var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.New);
+            var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.New).ToList();
             var orders = Mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(newOrdersFromDb);
 
             return View(orders);
@@ -36,14 +36,25 @@ namespace Library.App.Controllers
             return View(orders);
         }
 
-        public ActionResult ConfirmOrder()
+        public ActionResult ConfirmOrder(int orderId)
         {
-            return View();
+            var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
+            order.Status = Domain.Core.Enums.OrderStatus.OnHands;
+            this.unitOfWork.Orders.Update(orderId, order);
+            this.unitOfWork.Save();
+
+            return new HttpStatusCodeResult(200);
         }
 
-        public ActionResult RejectOrder()
+
+        public ActionResult RejectOrder(int orderId)
         {
-            return View();
+            var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
+            order.Status = Domain.Core.Enums.OrderStatus.Rejected;
+            this.unitOfWork.Orders.Update(orderId, order);
+            this.unitOfWork.Save();
+
+            return new HttpStatusCodeResult(200);
         }
     }
 

@@ -19,9 +19,10 @@ namespace Library.Infrastructure.Data.Repositories
             this.entities = context.Set<TEntity>();
         }
 
-        public void Create(TEntity item)
+        public TEntity Create(TEntity item)
         {
-            this.entities.Add(item);
+            var entity = this.entities.Add(item);
+            return entity;
         }
 
         public void Delete(TEntity item)

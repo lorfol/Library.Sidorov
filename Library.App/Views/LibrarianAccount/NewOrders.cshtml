@@ -7,15 +7,56 @@
 
 <h2>New Orders</h2>
 
-@foreach (var item in Model)
-{
-    <div class="card">
-        <div class="card-body">
-            <p>@item.BookName</p>
-            <p>@item.UserId</p>
-            @Html.ActionLink("Reject", "RejectOrder", new { orderId = item.Id }, new { @class = "btn btn-danger" })
-            @Html.ActionLink("Confirm", "ConfirmOrder", new { orderId = item.Id }, new { @class = "btn btn-success" })
-        </div>
-    </div>
-}
+<div class="table table-striped">
+    <table class="table">
+        <thead>
 
+        </thead>
+        <tbody id="order">
+               @foreach(var item in Model)
+               {
+                   @Html.Partial("OrderPartialView", item);
+               }
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+
+    function reject(orderId) {
+        debugger;
+        console.log(orderId);
+        $.get(
+            "/LibrarianAccount/RejectOrder",
+            { orderId: orderId },
+             function (result) {
+                let elementToDelete = document.getElementById(orderId);
+                elementToDelete.remove();
+            }
+        );
+    }
+
+    function confirm(orderId) {
+
+    }
+
+
+    $(function () {
+        // Ссылка на автоматически-сгенерированный прокси хаба
+        var chat = $.connection.orderHub;
+        // Объявление функции, которая хаб вызывает при получении сообщений
+        chat.client.addMessage = function (order) {
+            debugger;
+            // Добавление сообщений на веб-страницу
+            let ord = document.getElementById('order');
+            ord.innerHTML += order;
+        };
+
+
+        // Открываем соединение
+        $.connection.hub.start().done(function () {
+            console.log("Connection!!!!!!!!!!!!!")
+        });
+    });
+</script>

@@ -10,7 +10,7 @@ namespace Library.Domain.Interfaces.Repositories
 
         TEntity GetById(int id);
 
-        void Create(TEntity item);
+        TEntity Create(TEntity item);
 
         void Update(int id, TEntity item);
 

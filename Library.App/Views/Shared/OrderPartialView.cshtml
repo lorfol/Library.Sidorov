@@ -1,0 +1,20 @@
+﻿@model Library.App.ViewModels.OrderViewModel
+
+<tr id="@Model.Id">
+    <td>
+        @Model.BookName
+    </td>
+    <td>
+        @Model.UserId
+    </td>
+    <td>
+        <button onclick="reject(@Model.Id)" class="btn btn-danger">Reject</button>
+        @*@Html.ActionLink("Reject", "RejectOrder", new { orderId = item.Id }, new { @class = "btn btn-danger" })*@
+    </td>
+    <td>
+        <button onclick="reject(@Model.Id)" class="btn btn-danger"></button>
+        @*@Html.ActionLink("Confirm", "ConfirmOrder", new { orderId = item.Id }, new { @class = "btn btn-success" })*@
+    </td>
+</tr>
+
+
