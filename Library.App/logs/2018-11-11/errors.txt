@@ -1,2 +1,75 @@
 2018-11-11 01:26:45.8967|ERROR|Library.App.Logging.LibraryLogger|An error occurred while updating the entries. See the inner exception for details.
 2018-11-11 01:53:26.4147|ERROR|Library.App.Logging.LibraryLogger|Не удалось вызвать тип, не являющийся делегатом
+2018-11-11 18:33:46.9304|ERROR|Library.App.Logging.LibraryLogger|DataBinding: 'System.Data.Entity.DynamicProxies.Author_8EDCE5F136BA13B6B621282539C8AAC1E9392FC69089A23F06B1E9C7BF5B760B' не содержит свойство с именем AuthorId. 
+2018-11-11 18:34:16.9588|ERROR|Library.App.Logging.LibraryLogger|DataBinding: 'System.Data.Entity.DynamicProxies.Author_8EDCE5F136BA13B6B621282539C8AAC1E9392FC69089A23F06B1E9C7BF5B760B' не содержит свойство с именем Author. 
+2018-11-11 19:26:47.2435|ERROR|Library.App.Logging.LibraryLogger|An opening "(" is missing the corresponding closing ")".
+
+2018-11-11 19:29:18.1489|ERROR|Library.App.Logging.LibraryLogger|D:\VS_Projects\Library\Library.App\Views\AdministratorAccount\CreateBook.cshtml(57): error CS1503: Argument 4: cannot convert from 'int' to 'System.Collections.IEnumerable'
+2018-11-11 19:39:11.4046|ERROR|Library.App.Logging.LibraryLogger|Невозможно преобразовать тип "System.Collections.Generic.List<System.Web.Mvc.SelectListItem>" в "System.Web.Mvc.MultiSelectList"
+2018-11-11 19:57:32.8453|ERROR|Library.App.Logging.LibraryLogger|Value cannot be null or empty.
+Имя параметра: name
+2018-11-11 19:57:54.8751|ERROR|Library.App.Logging.LibraryLogger|Value cannot be null or empty.
+Имя параметра: name
+2018-11-11 20:07:33.8686|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 20:09:10.4334|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 20:09:42.3511|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 20:18:28.7849|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 20:20:10.2159|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 20:20:10.5349|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 20:20:10.5349|ERROR|Library.App.Logging.LibraryLogger|The view 'CreateBookPost' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/CreateBookPost.aspx
+~/Views/AdministratorAccount/CreateBookPost.ascx
+~/Views/Shared/CreateBookPost.aspx
+~/Views/Shared/CreateBookPost.ascx
+~/Views/AdministratorAccount/CreateBookPost.cshtml
+~/Views/AdministratorAccount/CreateBookPost.vbhtml
+~/Views/Shared/CreateBookPost.cshtml
+~/Views/Shared/CreateBookPost.vbhtml

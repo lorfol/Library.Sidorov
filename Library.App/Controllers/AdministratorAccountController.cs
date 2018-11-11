@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Library.Infrastructure.Data;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using Library.App.ViewModels;
 
 namespace Library.App.Controllers
 {
@@ -27,14 +28,48 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
-        public ActionResult CreateBook()
+        public ActionResult CreateBook(int? id = 2)
         {
-            return View();
+            BookCreateViewModel viewModel = new BookCreateViewModel
+            {
+                Authors = this.unitOfWork.Authors.GetAll().ToList(),
+                Publishers = this.unitOfWork.Publishers.GetAll().ToList()
+            };
+            if (id != null)
+            {
+                var book = this.unitOfWork.Books.GetById(id);
+
+                
+
+                viewModel.SelectedAuthors = book.Authors
+                    .Where(aut => viewModel.Authors.Select(t => t.Id).Any(n => n == aut.Id))
+                    .Select(f => f.Id).ToList();
+
+                viewModel.MultiSelectedAuthors = new MultiSelectList(viewModel.Authors, "Id", "Name", viewModel.SelectedAuthors);
+
+                //ViewBag.MultiSelect = new MultiSelectList(viewModel.Authors, "Id", "Name", viewModel.SelectedAuthors).ToList();
+            }
+            else
+            {
+                
+            }
+
+
+            //BookCreateViewModel viewModel = new BookCreateViewModel
+            //{
+            //    Authors = this.unitOfWork.Authors.GetAll().ToList(),
+            //    Publishers = this.unitOfWork.Publishers.GetAll().ToList()
+            //};
+            //ViewBag.Authors = this.unitOfWork.Authors.GetAll().ToList();
+            //ViewBag.Publishers = this.unitOfWork.Publishers.GetAll().ToList();
+
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult CreateBookPost()
+        public ActionResult CreateBookPost(BookCreateViewModel book)
         {
+
             return View();
         }
 
@@ -43,8 +78,8 @@ namespace Library.App.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult UpdateBookPost()
+        [HttpPut]
+        public ActionResult UpdateBookPost(int id, BookCreateViewModel book)
         {
             return View();
         }
@@ -57,7 +92,7 @@ namespace Library.App.Controllers
         public async Task<ActionResult> ManageUsers()
         {
             var userRole = ApplicationUserManager.RoleManager.Roles.FirstOrDefault(f => f.Name == "user").Id;
-            var users = await UserManager.Users.Where(t => t.Roles.Any(p=>p.RoleId == userRole)).ToListAsync();
+            var users = await UserManager.Users.Where(t => t.Roles.Any(p => p.RoleId == userRole)).ToListAsync();
 
             return View(users);
         }

@@ -22,7 +22,7 @@
                 <td>@user.Name</td>
                 <td>@user.Email</td>
                 <td>
-                    @Html.ActionLink("Degrade", "DeleteLibrarian", "AdministratorAccount", new { UserId = user.Id }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Remove from the librarian role", "DeleteLibrarian", "AdministratorAccount", new { UserId = user.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

@@ -7,14 +7,15 @@
 @using Library.App.ViewModels
 @model IPagedList<BookViewModel>
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Get))
-{
-    @Html.TextBox("search", String.Empty, new { @class = "form-control", @placeholder = "Search by Name/Author", @value = "search" });
-}
-
 @if (HttpContext.Current.User.IsInRole("admin"))
 {
     @Html.ActionLink("Add new Book", "CreateBook", "AdministratorAccount", null, new { @class = "btn btn-primary" })
+}
+<br />
+<br />
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    @Html.TextBox("search", String.Empty, new { @class = "form-control", @placeholder = "Search by Name/Author", @value = "search" });
 }
 
 <table class="table table-striped">
@@ -156,7 +157,7 @@
                             }
                             else
                             {
-                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id }, new { @class = "btn btn-success viewDialog", data_dialog_title = "Book ordering" })
+                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
                             }
                         }
                     </td>
@@ -170,27 +171,30 @@
     @Html.PagedListPager(Model, page => Url.Action("Index", new { page, search = Request.QueryString["search"], orderBy = Request.QueryString["orderBy"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true, DisplayItemSliceAndTotal = true })
 </div>
 
+
+
+
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button id="order_1" onclick="order(false)" type="button" class="btn btn-primary">In reading room</button>
-                <button id="order_2" onclick="order(true)" type="button" class="btn btn-primary">Order</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+@*<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button id="order_1" onclick="order(false)" type="button" class="btn btn-primary">In reading room</button>
+                    <button id="order_2" onclick="order(true)" type="button" class="btn btn-primary">Order</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </div>*@
 
 
 @*<script>
@@ -225,31 +229,31 @@
     </script>*@
 
 @*<script src='@Url.Content("~/Scripts/jquery-3.3.1.min.js")' type="text/javascript"></script>
-<script src='@Url.Content("~/Scripts/jquery-ui-1.12.1.min.js")' type="text/javascript"></script>
+    <script src='@Url.Content("~/Scripts/jquery-ui-1.12.1.min.js")' type="text/javascript"></script>
 
-@Scripts.Render("~/scripts/jquery-3.3.1.js")
-@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
-@Scripts.Render("~/Content/themes/base/jquery-ui.css")
+    @Scripts.Render("~/scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+    @Scripts.Render("~/Content/themes/base/jquery-ui.css")
 
-<script>
-    $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-        $.ajaxSetup({ cache: false });
+            $.ajaxSetup({ cache: false });
 
-        $(".viewDialog").on("click", function (e) {
-            e.preventDefault();
+            $(".viewDialog").on("click", function (e) {
+                e.preventDefault();
 
-            $("<div></div>")
-                .addClass("dialog")
-                .appendTo("body")
-                .dialog({
-                    title: $(this).attr("data-dialog-title"),
-                    close: function () { $(this).remove() },
-                    modal: true
-                })
-                .load(this.href);
+                $("<div></div>")
+                    .addClass("dialog")
+                    .appendTo("body")
+                    .dialog({
+                        title: $(this).attr("data-dialog-title"),
+                        close: function () { $(this).remove() },
+                        modal: true
+                    })
+                    .load(this.href);
+            });
         });
-    });
-</script>*@
+    </script>*@
 
 
