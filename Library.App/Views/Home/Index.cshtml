@@ -156,7 +156,7 @@
                             }
                             else
                             {
-                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id, userName = User.Identity.Name }, new { @class = "btn btn-success viewDialog", data_dialog_title = "Book ordering" })
+                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id }, new { @class = "btn btn-success viewDialog", data_dialog_title = "Book ordering" })
                             }
                         }
                     </td>

@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -27,29 +28,36 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
-        public ActionResult CreateBookOrder(int bookId, string userName)
+        public async Task<ActionResult> CreateBookOrder(int bookId)
         {
             var hubContext = GlobalHost.ConnectionManager.GetHubContext<OrderHub>();
-            var userID = UserManager.Users.FirstOrDefault(u => u.UserName == userName).Id;
+            var user = await this.UserManager.FindByEmailAsync(this.User.Identity.Name);
+            var orderId = Guid.NewGuid().ToString();
+
             Order order = new Order()
             {
+                Id = orderId,
                 BookId = bookId,
                 TakenDate = DateTime.Now,
-                ReturnDate = DateTime.Now.AddMinutes(3),
                 LateFine = 0,
                 Status = Domain.Core.Enums.OrderStatus.New,
-                UserId = userID
+                UserId = user.Id
             };
-            var orderId = this.unitOfWork.Orders.Create(order).Id;
 
+            this.unitOfWork.Orders.Create(order);
+            var book = this.unitOfWork.Books.GetById(bookId);
+            book.Count--;
+            this.unitOfWork.Books.Update(bookId, book);
             this.unitOfWork.Save();
 
-            var orderFromDb = this.unitOfWork.Orders.Find(ord => ord.Id == orderId).FirstOrDefault();
-            var orderView = Mapper.Map<Order, OrderViewModel>(orderFromDb);
-            var htmlParetial = this.RenderViewToString(ControllerContext, "OrderPartialView", orderView);
-            hubContext.Clients.All.addMessage(htmlParetial);
 
-            return new HttpStatusCodeResult(200);
+            var orderFromDb = this.unitOfWork.Orders.GetById(orderId);
+            var orderView = Mapper.Map<Order, OrderViewModel>(orderFromDb);
+            var htmlPartial = this.RenderViewToString(ControllerContext, "OrderPartialView", orderView);
+
+            hubContext.Clients.All.addMessage(htmlPartial);
+
+            return RedirectToAction("UserOrders", "UserAccount");
         }
 
         [HttpGet]

@@ -1,0 +1,23 @@
+﻿@model Library.App.ViewModels.OrderViewModel
+
+<tr id="@Model.Id">
+    <td>
+        @Model.BookName
+    </td>
+    <td>
+        @Model.TakenDate
+    </td>
+    <td>
+        @Model.ReturnDate
+    </td>
+    <td>
+        @Model.Status
+    </td>
+    <td>
+        @Model.LateFine
+    </td>
+    <td>
+        <button onclick="closeOrder('@Model.Id')" class="btn btn-primary">Close</button>
+    </td>
+</tr>
+

@@ -7,7 +7,7 @@ namespace Library.App.ViewModels
 {
     public class OrderViewModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public int BookId { get; set; }
 

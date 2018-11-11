@@ -8,11 +8,11 @@ namespace Library.Domain.Interfaces.Repositories
     {
         IEnumerable<TEntity> GetAll();
 
-        TEntity GetById(int id);
+        TEntity GetById(object id);
 
         TEntity Create(TEntity item);
 
-        void Update(int id, TEntity item);
+        void Update(object id, TEntity item);
 
         void Delete(TEntity item);
 

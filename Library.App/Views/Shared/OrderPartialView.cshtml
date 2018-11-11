@@ -8,12 +8,10 @@
         @Model.UserId
     </td>
     <td>
-        <button onclick="reject(@Model.Id)" class="btn btn-danger">Reject</button>
-        @*@Html.ActionLink("Reject", "RejectOrder", new { orderId = item.Id }, new { @class = "btn btn-danger" })*@
+        <button onclick="confirm('@Model.Id')" class="btn btn-success">Confirm</button>
     </td>
     <td>
-        <button onclick="reject(@Model.Id)" class="btn btn-danger"></button>
-        @*@Html.ActionLink("Confirm", "ConfirmOrder", new { orderId = item.Id }, new { @class = "btn btn-success" })*@
+        <button onclick="reject('@Model.Id')" class="btn btn-danger">Reject</button>
     </td>
 </tr>
 

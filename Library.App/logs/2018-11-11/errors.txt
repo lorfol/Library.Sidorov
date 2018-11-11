@@ -1,0 +1,2 @@
+2018-11-11 01:26:45.8967|ERROR|Library.App.Logging.LibraryLogger|An error occurred while updating the entries. See the inner exception for details.
+2018-11-11 01:53:26.4147|ERROR|Library.App.Logging.LibraryLogger|Не удалось вызвать тип, не являющийся делегатом

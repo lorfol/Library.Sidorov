@@ -67,3 +67,12 @@ System.Collections.Generic.IEnumerable`1[[Library.Domain.Core.Models.Order, Libr
 2018-11-10 21:08:38.9493|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
 2018-11-10 21:15:37.7664|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
 2018-11-10 21:17:36.9961|ERROR|Library.App.Logging.LibraryLogger|Ссылка на объект не указывает на экземпляр объекта.
+2018-11-10 23:36:07.4680|ERROR|Library.App.Logging.LibraryLogger|The view 'ConfirmedOrders' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/LibrarianAccount/ConfirmedOrders.aspx
+~/Views/LibrarianAccount/ConfirmedOrders.ascx
+~/Views/Shared/ConfirmedOrders.aspx
+~/Views/Shared/ConfirmedOrders.ascx
+~/Views/LibrarianAccount/ConfirmedOrders.cshtml
+~/Views/LibrarianAccount/ConfirmedOrders.vbhtml
+~/Views/Shared/ConfirmedOrders.cshtml
+~/Views/Shared/ConfirmedOrders.vbhtml

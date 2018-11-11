@@ -19,33 +19,33 @@ namespace Library.Infrastructure.Data.Repositories
             this.entities = context.Set<TEntity>();
         }
 
-        public TEntity Create(TEntity item)
+        public virtual TEntity Create(TEntity item)
         {
             var entity = this.entities.Add(item);
             return entity;
         }
 
-        public void Delete(TEntity item)
+        public virtual void Delete(TEntity item)
         {
             this.entities.Remove(item);
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public virtual IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
             return this.entities.Where(predicate);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             return this.entities.ToList();
         }
 
-        public TEntity GetById(int id)
+        public virtual TEntity GetById(object id)
         {
             return this.entities.Find(id);
         }
 
-        public void Update(int id, TEntity item)
+        public virtual void Update(object id, TEntity item)
         {
             var entity = this.entities.Find(id);
             if (entity == null)

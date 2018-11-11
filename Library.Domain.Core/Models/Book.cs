@@ -26,6 +26,6 @@ namespace Library.Domain.Core.Models
 
         public DateTime PublicationDate { get; set; }
 
-        public virtual IEnumerable<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

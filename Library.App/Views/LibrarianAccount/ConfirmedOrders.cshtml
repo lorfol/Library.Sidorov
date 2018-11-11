@@ -1,0 +1,50 @@
+﻿@using Library.App.ViewModels
+@model IEnumerable<OrderViewModel>
+
+@{
+    ViewBag.Title = "ConfirmedOrders";
+}
+
+<h2>ConfirmedOrders</h2>
+<br />
+
+@if (Model.Count() == 0)
+{
+    <h4>No confirmed orders</h4>
+}
+else
+{
+    <table class="table table-striped">
+
+        <thead>
+            <tr>
+                <th>Book name</th>
+                <th>Taken date</th>
+                <th>Return date</th>
+                <th>Status</th>
+                <th>Late fine</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                @Html.Partial("ConfirmedOrderPartial", order)
+            }
+        </tbody>
+    </table>
+}
+
+<script>
+
+    function closeOrder(orderId) {
+        $.get(
+            "/LibrarianAccount/CloseOrder",
+            { orderId: orderId },
+            function (result) {
+                let elementToDelete = document.getElementById(orderId);
+                elementToDelete.remove();
+            }
+        );
+    }
+</script>

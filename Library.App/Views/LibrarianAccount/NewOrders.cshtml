@@ -2,7 +2,9 @@
 @model IEnumerable<OrderViewModel>
 
 @{
-    ViewBag.Title = "NewOrders";
+                /**/
+
+                ViewBag.Title = "NewOrders";
 }
 
 <h2>New Orders</h2>
@@ -13,10 +15,10 @@
 
         </thead>
         <tbody id="order">
-               @foreach(var item in Model)
-               {
-                   @Html.Partial("OrderPartialView", item);
-               }
+            @foreach (var item in Model)
+            {
+                @Html.Partial("OrderPartialView", item);
+            }
         </tbody>
     </table>
 </div>
@@ -25,12 +27,10 @@
 <script>
 
     function reject(orderId) {
-        debugger;
-        console.log(orderId);
         $.get(
             "/LibrarianAccount/RejectOrder",
             { orderId: orderId },
-             function (result) {
+            function (result) {
                 let elementToDelete = document.getElementById(orderId);
                 elementToDelete.remove();
             }
@@ -38,7 +38,14 @@
     }
 
     function confirm(orderId) {
-
+        $.get(
+            "/LibrarianAccount/ConfirmOrder",
+            { orderId: orderId },
+            function (result) {
+                let elementToDelete = document.getElementById(orderId);
+                elementToDelete.remove();
+            }
+        );
     }
 
 

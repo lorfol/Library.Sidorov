@@ -1,11 +1,13 @@
 ﻿using Library.Domain.Core.Enums;
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Library.Domain.Core.Models
 {
     public class Order
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public int BookId { get; set; }
 
@@ -19,7 +21,7 @@ namespace Library.Domain.Core.Models
 
         public DateTime TakenDate { get; set; }
 
-        public DateTime ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
 
         public float LateFine { get; set; }
 

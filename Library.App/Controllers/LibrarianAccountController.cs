@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Library.App.Hubs;
 using Library.App.ViewModels;
 using Library.Domain.Core.Models;
 using Library.Domain.Interfaces;
+using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ using System.Web.Mvc;
 
 namespace Library.App.Controllers
 {
-    [Authorize(Roles = "librarian")]
+    [System.Web.Mvc.Authorize(Roles = "librarian")]
     public class LibrarianAccountController : Controller
     {
         IUnitOfWork unitOfWork;
@@ -30,28 +32,48 @@ namespace Library.App.Controllers
 
         public ActionResult ConfirmedOrders()
         {
-            var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.OnHands);
+            var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.OnHands).OrderByDescending(ord=>ord.TakenDate).ToList();
             var orders = Mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(newOrdersFromDb);
 
             return View(orders);
         }
 
-        public ActionResult ConfirmOrder(int orderId)
+        public ActionResult CloseOrder(string orderId)
         {
             var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
-            order.Status = Domain.Core.Enums.OrderStatus.OnHands;
+            order.Status = Domain.Core.Enums.OrderStatus.Closed;
             this.unitOfWork.Orders.Update(orderId, order);
+            var book = this.unitOfWork.Books.GetById(order.BookId);
+            book.Count++;
+            this.unitOfWork.Books.Update(book.Id, book);
             this.unitOfWork.Save();
 
             return new HttpStatusCodeResult(200);
         }
 
+        public ActionResult ConfirmOrder(string orderId)
+        {
+            var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
+            order.Status = Domain.Core.Enums.OrderStatus.OnHands;
+            order.TakenDate = DateTime.Now;
+            order.ReturnDate = DateTime.Now.AddHours(10);
+            this.unitOfWork.Orders.Update(orderId, order);
+            this.unitOfWork.Save();
+            var hubContext = GlobalHost.ConnectionManager.GetHubContext<UserOrdersHub>();
+            hubContext.Clients.All.addMessage(new { Id = order.Id, Status = order.Status.ToString() });
 
-        public ActionResult RejectOrder(int orderId)
+            return new HttpStatusCodeResult(200);
+        }
+
+
+        public ActionResult RejectOrder(string orderId)
         {
             var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
             order.Status = Domain.Core.Enums.OrderStatus.Rejected;
             this.unitOfWork.Orders.Update(orderId, order);
+            var book = this.unitOfWork.Books.GetById(order.BookId);
+            book.Count++;
+            this.unitOfWork.Books.Update(book.Id, book);
             this.unitOfWork.Save();
 
             return new HttpStatusCodeResult(200);

@@ -234,6 +234,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hubs\OrderHub.cs" />
+    <Compile Include="Hubs\UserOrdersHub.cs" />
     <Compile Include="IoC\NinjectRegistration.cs" />
     <Compile Include="Logging\CustomHandleErrorAtribute.cs" />
     <Compile Include="Logging\LibraryLogger.cs" />
@@ -344,6 +345,8 @@
     <Content Include="Views\AdministratorAccount\ManageLibrarians.cshtml" />
     <Content Include="Views\LibrarianAccount\NewOrders.cshtml" />
     <Content Include="Views\Shared\OrderPartialView.cshtml" />
+    <Content Include="Views\LibrarianAccount\ConfirmedOrders.cshtml" />
+    <Content Include="Views\Shared\ConfirmedOrderPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
