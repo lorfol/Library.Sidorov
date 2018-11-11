@@ -3,18 +3,19 @@ using Library.Domain.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace Library.App.ViewModels
 {
-    public class BookCreateViewModel
+    public class BookUpdateViewModel
     {
-        public BookCreateViewModel()
+        public BookUpdateViewModel()
         {
         }
+
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -29,7 +30,7 @@ namespace Library.App.ViewModels
 
         public string Description { get; set; }
 
-        //[IntegerValidator(MinValue = 0)]
+         // TODO: !!!!!!!!!!! atrib
         public int Count { get; set; }
 
         public DateTime PublicationDate { get; set; }

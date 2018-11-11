@@ -9,7 +9,7 @@
 
 @if (HttpContext.Current.User.IsInRole("admin"))
 {
-    @Html.ActionLink("Add new Book", "CreateBook", "AdministratorAccount", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Add new Book", "ManageCreateBook", "AdministratorAccount", null, new { @class = "btn btn-primary" })
 }
 <br />
 <br />
@@ -142,9 +142,9 @@
 
                         @if (HttpContext.Current.User.IsInRole("admin"))
                         {
-                            @Html.ActionLink("Edit", "UpdateBook", new { bookId = item.Id }, new { @class = "btn btn-warning" })
+                            @Html.ActionLink("Edit", "ManageUpdateBook", "AdministratorAccount", new { bookId = item.Id }, new { @class = "btn btn-warning" })
                             <span>
-                                @Html.ActionLink("Delete", "DeleteBook", new { bookId = item.Id }, new { @class = "btn btn-danger" })
+                                @Html.ActionLink("Delete", "DeleteBook", "AdministratorAccount", new { bookId = item.Id }, new { @class = "btn btn-danger" })
                             </span>
                         }
 

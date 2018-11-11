@@ -53,7 +53,7 @@
 
         @if (HttpContext.Current.User.IsInRole("admin"))
         {
-            @Html.ActionLink("Edit", "UpdateBook", "AdministratorAccount", new { bookId = Model.Id }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Edit", "ManageUpdateBook", "AdministratorAccount", new { bookId = Model.Id }, new { @class = "btn btn-warning" })
             <span>
                 @Html.ActionLink("Delete", "DeleteBook", "AdministratorAccount", new { bookId = Model.Id }, new { @class = "btn btn-danger" })
             </span>

@@ -17,13 +17,23 @@ namespace Library.App.Mapping
                 .ForMember(dest => dest.Publisher, opt => opt.MapFrom(src => src.Publisher.Name))
                 .ForMember(dest => dest.PublicationYear, opt => opt.MapFrom(src => src.PublicationDate.Year.ToString()));
 
-
             CreateMap<Order, OrderViewModel>()
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
                 .ForMember(dest => dest.BookName, opt => opt.MapFrom(src => src.Book.Name));
 
             CreateMap<User, UserViewModel>();
 
+            CreateMap<Book, BookUpdateViewModel>()
+                .ForMember(dest => dest.SelectedPublisher, opt => opt.MapFrom(src => src.PublisherId));
+
+            CreateMap<Book, BookCreateViewModel>()
+                .ForMember(dest => dest.SelectedPublisher, opt => opt.MapFrom(src => src.PublisherId));
+
+            CreateMap<BookUpdateViewModel, Book>()
+                .ForMember(dest => dest.PublisherId, opt => opt.MapFrom(src => src.SelectedPublisher));
+
+            CreateMap<BookCreateViewModel, Book>()
+                .ForMember(dest => dest.PublisherId, opt => opt.MapFrom(src => src.SelectedPublisher));
         }
     }
 }

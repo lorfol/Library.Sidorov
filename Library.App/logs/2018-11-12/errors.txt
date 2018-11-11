@@ -1,0 +1,13 @@
+2018-11-12 00:18:18.9386|ERROR|Library.App.Logging.LibraryLogger|The view 'UpdateBook' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/AdministratorAccount/UpdateBook.aspx
+~/Views/AdministratorAccount/UpdateBook.ascx
+~/Views/Shared/UpdateBook.aspx
+~/Views/Shared/UpdateBook.ascx
+~/Views/AdministratorAccount/UpdateBook.cshtml
+~/Views/AdministratorAccount/UpdateBook.vbhtml
+~/Views/Shared/UpdateBook.cshtml
+~/Views/Shared/UpdateBook.vbhtml
+2018-11-12 00:45:26.3777|ERROR|Library.App.Logging.LibraryLogger|An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
+2018-11-12 00:49:53.6218|ERROR|Library.App.Logging.LibraryLogger|An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
+2018-11-12 00:55:06.0684|ERROR|Library.App.Logging.LibraryLogger|An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
+2018-11-12 00:57:21.0714|ERROR|Library.App.Logging.LibraryLogger|An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.

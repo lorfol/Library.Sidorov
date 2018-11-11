@@ -13,6 +13,7 @@ using Library.Infrastructure.Data;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
 using Library.App.ViewModels;
+using AutoMapper;
 
 namespace Library.App.Controllers
 {
@@ -28,65 +29,83 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
-        public ActionResult CreateBook(int? id = 2)
+        public ActionResult ManageCreateBook()
         {
-            BookCreateViewModel viewModel = new BookCreateViewModel
-            {
-                Authors = this.unitOfWork.Authors.GetAll().ToList(),
-                Publishers = this.unitOfWork.Publishers.GetAll().ToList()
-            };
-            if (id != null)
-            {
-                var book = this.unitOfWork.Books.GetById(id);
+            BookCreateViewModel viewModel = new BookCreateViewModel();
 
-                
+            var authors = this.unitOfWork.Authors.GetAll().ToList();
+            var publishers = this.unitOfWork.Publishers.GetAll().ToList();
 
-                viewModel.SelectedAuthors = book.Authors
-                    .Where(aut => viewModel.Authors.Select(t => t.Id).Any(n => n == aut.Id))
-                    .Select(f => f.Id).ToList();
+            viewModel.MultiSelectedAuthors = new MultiSelectList(authors, "Id", "Name");
+            viewModel.SelectedPublishers = new SelectList(publishers, "Id", "Name");
 
-                viewModel.MultiSelectedAuthors = new MultiSelectList(viewModel.Authors, "Id", "Name", viewModel.SelectedAuthors);
+            return View(viewModel);
+        }
 
-                //ViewBag.MultiSelect = new MultiSelectList(viewModel.Authors, "Id", "Name", viewModel.SelectedAuthors).ToList();
-            }
-            else
-            {
-                
-            }
+        public ActionResult ManageUpdateBook(int bookId)
+        {
+            BookUpdateViewModel viewModel = new BookUpdateViewModel();
 
+            var book = this.unitOfWork.Books.GetById(bookId);
 
-            //BookCreateViewModel viewModel = new BookCreateViewModel
-            //{
-            //    Authors = this.unitOfWork.Authors.GetAll().ToList(),
-            //    Publishers = this.unitOfWork.Publishers.GetAll().ToList()
-            //};
-            //ViewBag.Authors = this.unitOfWork.Authors.GetAll().ToList();
-            //ViewBag.Publishers = this.unitOfWork.Publishers.GetAll().ToList();
+            viewModel = Mapper.Map<Book, BookUpdateViewModel>(book);
+
+            var authors = this.unitOfWork.Authors.GetAll().ToList();
+            var publishers = this.unitOfWork.Publishers.GetAll().ToList();
+
+            viewModel.SelectedPublishers = new SelectList(publishers, "Id", "Name", book.PublisherId);
+
+            viewModel.SelectedAuthors = book.Authors?
+                .Where(aut => authors.Select(t => t.Id).Any(n => n == aut.Id))
+                .Select(f => f.Id).ToList();
+
+            viewModel.MultiSelectedAuthors = new MultiSelectList(authors, "Id", "Name", viewModel.SelectedAuthors);
+
+            ViewBag.Id = bookId;
 
             return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult CreateBookPost(BookCreateViewModel book)
+        public ActionResult CreateBook(BookCreateViewModel book)
         {
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(422);
+            }
+            var newBook = Mapper.Map<BookCreateViewModel, Book>(book);
+            newBook.Authors = this.unitOfWork.Authors.Find(f => book.SelectedAuthors.Any(p => p == f.Id)).ToList();
+            this.unitOfWork.Books.Create(newBook);
+            this.unitOfWork.Save();
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult UpdateBook()
+        [HttpPost]
+        public ActionResult UpdateBook(BookUpdateViewModel book)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(422);
+            }
+            var bookFromDb = this.unitOfWork.Books.GetById(book.Id);
+            Mapper.Map<BookUpdateViewModel, Book>(book, bookFromDb);
+            bookFromDb.Authors.RemoveAll(a => book.SelectedAuthors.All(f => f != a.Id));
+            var newAuthorsIds = book.SelectedAuthors.Except(bookFromDb.Authors.Select(s => s.Id));
+            var newAuthors = this.unitOfWork.Authors.Find(f => newAuthorsIds.Any(a => a == f.Id));
+            bookFromDb.Authors.AddRange(newAuthors);
+            this.unitOfWork.Books.Update(bookFromDb.Id, bookFromDb);
+            this.unitOfWork.Save();
+
+            return RedirectToAction("Index", "Home");
         }
 
-        [HttpPut]
-        public ActionResult UpdateBookPost(int id, BookCreateViewModel book)
+        public ActionResult DeleteBook(int bookId)
         {
-            return View();
-        }
+            this.unitOfWork.Books.Delete(this.unitOfWork.Books.GetById(bookId));
+            this.unitOfWork.Save();
 
-        public ActionResult DeleteBook()
-        {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         public async Task<ActionResult> ManageUsers()

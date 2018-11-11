@@ -73,3 +73,11 @@
 ~/Views/AdministratorAccount/CreateBookPost.vbhtml
 ~/Views/Shared/CreateBookPost.cshtml
 ~/Views/Shared/CreateBookPost.vbhtml
+2018-11-11 21:23:23.0725|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult ManageUpdateBook(Int32)' in 'Library.App.Controllers.AdministratorAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-11 21:23:47.5266|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult ManageUpdateBook(Int32)' in 'Library.App.Controllers.AdministratorAccountController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-11 22:02:31.5537|ERROR|Library.App.Logging.LibraryLogger|D:\VS_Projects\Library\Library.App\Views\AdministratorAccount\ManageUpdateBook.cshtml(63): error CS1061: 'BookUpdateViewModel' does not contain a definition for 'Publishers' and no extension method 'Publishers' accepting a first argument of type 'BookUpdateViewModel' could be found (are you missing a using directive or an assembly reference?)
+2018-11-11 22:04:59.4013|ERROR|Library.App.Logging.LibraryLogger|DataBinding: 'System.Web.Mvc.SelectListItem' не содержит свойство с именем Id. 
+2018-11-11 22:06:52.9665|ERROR|Library.App.Logging.LibraryLogger|DataBinding: 'System.Web.Mvc.SelectListItem' не содержит свойство с именем Id. 
+2018-11-11 22:52:20.4769|ERROR|Library.App.Logging.LibraryLogger|Для данного объекта не определено беспараметрических конструкторов. Object type 'System.Web.Mvc.SelectList'.
