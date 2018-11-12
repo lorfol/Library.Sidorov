@@ -33,6 +33,6 @@ namespace Library.App.ViewModels
          // TODO: !!!!!!!!!!! atrib
         public int Count { get; set; }
 
-        public DateTime PublicationDate { get; set; }
+        public string PublicationYear { get; set; }
     }
 }

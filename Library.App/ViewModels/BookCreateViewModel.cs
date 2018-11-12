@@ -32,6 +32,6 @@ namespace Library.App.ViewModels
         //[IntegerValidator(MinValue = 0)]
         public int Count { get; set; }
 
-        public DateTime PublicationDate { get; set; }
+        public string PublicationYear { get; set; }
     }
 }

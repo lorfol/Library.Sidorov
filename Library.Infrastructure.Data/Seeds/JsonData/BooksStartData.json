@@ -3,7 +3,7 @@
     "Name": "Via C#",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 1,
-    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublicationDate": "2012",
     "PublisherId": 1,
     "Authors": [
       { "Id": 1 }
@@ -13,7 +13,7 @@
     "Name": "The Lord of the Rings",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 3,
-    "PublicationDate": "2001-04-23T18:25:43.511Z",
+    "PublicationDate": "2001",
     "PublisherId": 2,
     "Authors": [
       { "Id": 1 },
@@ -24,7 +24,7 @@
     "Name": "The Master and Margarita",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 2,
-    "PublicationDate": "1992-04-23T18:25:43.511Z",
+    "PublicationDate": "1992",
     "PublisherId": 1,
     "Authors": [
       { "Id": 3 },
@@ -36,7 +36,7 @@
     "Name": "Game of Thrones",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 0,
-    "PublicationDate": "2010-04-23T18:25:43.511Z",
+    "PublicationDate": "2010",
     "PublisherId": 3,
     "Authors": [
       { "Id": 4 },
@@ -47,7 +47,7 @@
     "Name": "Microsoft Visual C#",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 0,
-    "PublicationDate": "2009-04-23T18:25:43.511Z",
+    "PublicationDate": "2009",
     "PublisherId": 4,
     "Authors": [
       { "Id": 1 }
@@ -57,7 +57,7 @@
     "Name": "Java",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 4,
-    "PublicationDate": "2003-04-23T18:25:43.511Z",
+    "PublicationDate": "2003",
     "PublisherId": 3,
     "Authors": [
       { "Id": 6 },
@@ -68,7 +68,7 @@
     "Name": ".NET Core 2.0",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 0,
-    "PublicationDate": "2017-04-23T18:25:43.511Z",
+    "PublicationDate": "2017",
     "PublisherId": 1,
     "Authors": [
       { "Id": 7 },
@@ -80,7 +80,7 @@
     "Name": "Empire of Angels",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 1,
-    "PublicationDate": "1980-04-23T18:25:43.511Z",
+    "PublicationDate": "1980",
     "PublisherId": 5,
     "Authors": [
       { "Id": 8 },
@@ -91,7 +91,7 @@
     "Name": "JavaScript",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 0,
-    "PublicationDate": "2012-04-23T18:25:43.511Z",
+    "PublicationDate": "2012",
     "PublisherId": 2,
     "Authors": [
       { "Id": 1 },
@@ -103,7 +103,7 @@
     "Name": "Extreme Programming",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 0,
-    "PublicationDate": "2013-04-23T18:25:43.511Z",
+    "PublicationDate": "2013",
     "PublisherId": 3,
     "Authors": [
       { "Id": 2 },
@@ -115,7 +115,7 @@
     "Name": "Assembler",
     "Description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles (non-magical people).",
     "Count": 0,
-    "PublicationDate": "1983-04-23T18:25:43.511Z",
+    "PublicationDate": "1983",
     "PublisherId": 4,
     "Authors": [
       { "Id": 4 },

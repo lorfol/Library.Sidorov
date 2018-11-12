@@ -106,6 +106,10 @@
     <Compile Include="Migrations\201811102331388_ChangeReturnDateToNullableInOrdersTable.Designer.cs">
       <DependentUpon>201811102331388_ChangeReturnDateToNullableInOrdersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811121818400_ChangeColumnDateTimePuplicationDateToStringPublicationYearInBooksTable.cs" />
+    <Compile Include="Migrations\201811121818400_ChangeColumnDateTimePuplicationDateToStringPublicationYearInBooksTable.Designer.cs">
+      <DependentUpon>201811121818400_ChangeColumnDateTimePuplicationDateToStringPublicationYearInBooksTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AuthorRepository.cs" />
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811102331388_ChangeReturnDateToNullableInOrdersTable.resx">
       <DependentUpon>201811102331388_ChangeReturnDateToNullableInOrdersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811121818400_ChangeColumnDateTimePuplicationDateToStringPublicationYearInBooksTable.resx">
+      <DependentUpon>201811121818400_ChangeColumnDateTimePuplicationDateToStringPublicationYearInBooksTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

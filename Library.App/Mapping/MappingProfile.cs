@@ -14,8 +14,7 @@ namespace Library.App.Mapping
         {
             CreateMap<Book, BookViewModel>()
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => string.Join(", ", src.Authors.OrderBy(a => a.Name).Select(z => z.Name))))
-                .ForMember(dest => dest.Publisher, opt => opt.MapFrom(src => src.Publisher.Name))
-                .ForMember(dest => dest.PublicationYear, opt => opt.MapFrom(src => src.PublicationDate.Year.ToString()));
+                .ForMember(dest => dest.Publisher, opt => opt.MapFrom(src => src.Publisher.Name));
 
             CreateMap<Order, OrderViewModel>()
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
@@ -37,9 +36,6 @@ namespace Library.App.Mapping
 
             CreateMap<Author, AuthorCreateViewModel>().ReverseMap();
             CreateMap<Publisher, PublisherCreateViewModel>().ReverseMap();
-
-            //CreateMap<AuthorCreateViewModel, Author>();
-            //CreateMap<PublisherCreateViewModel, Publisher>();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Library.Domain.Core.Models
 
         public int Count { get; set; }
 
-        public DateTime PublicationDate { get; set; }
+        public string PublicationYear { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
     }
