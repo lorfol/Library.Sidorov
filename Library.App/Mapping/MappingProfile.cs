@@ -34,6 +34,12 @@ namespace Library.App.Mapping
 
             CreateMap<BookCreateViewModel, Book>()
                 .ForMember(dest => dest.PublisherId, opt => opt.MapFrom(src => src.SelectedPublisher));
+
+            CreateMap<Author, AuthorCreateViewModel>().ReverseMap();
+            CreateMap<Publisher, PublisherCreateViewModel>().ReverseMap();
+
+            //CreateMap<AuthorCreateViewModel, Author>();
+            //CreateMap<PublisherCreateViewModel, Publisher>();
         }
     }
 }

@@ -108,6 +108,40 @@ namespace Library.App.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public ActionResult ManageCreateAuthor()
+        {
+            AuthorCreateViewModel authorCreateViewModel = new AuthorCreateViewModel();
+
+            return View(authorCreateViewModel);
+        }
+
+        public ActionResult ManageCreatePublisher()
+        {
+            PublisherCreateViewModel publisherCreateViewModel = new PublisherCreateViewModel();
+
+            return View(publisherCreateViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult CreateAuthor(AuthorCreateViewModel viewModel)
+        {
+            var newAuthor = Mapper.Map<AuthorCreateViewModel, Author>(viewModel);
+            this.unitOfWork.Authors.Create(newAuthor);
+            this.unitOfWork.Save();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public ActionResult CreatePublisher(PublisherCreateViewModel viewModel)
+        {
+            var newPublisher = Mapper.Map<PublisherCreateViewModel, Publisher>(viewModel);
+            this.unitOfWork.Publishers.Create(newPublisher);
+            this.unitOfWork.Save();
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public async Task<ActionResult> ManageUsers()
         {
             var userRole = ApplicationUserManager.RoleManager.Roles.FirstOrDefault(f => f.Name == "user").Id;

@@ -10,6 +10,10 @@
 @if (HttpContext.Current.User.IsInRole("admin"))
 {
     @Html.ActionLink("Add new Book", "ManageCreateBook", "AdministratorAccount", null, new { @class = "btn btn-primary" })
+    <span>
+        @Html.ActionLink("Add new Author", "ManageCreateAuthor", "AdministratorAccount", null, new { @class = "btn btn-primary" })
+    </span>
+    @Html.ActionLink("Add new Publisher", "ManageCreatePublisher", "AdministratorAccount", null, new { @class = "btn btn-primary" })
 }
 <br />
 <br />
