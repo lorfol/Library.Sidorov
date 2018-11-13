@@ -15,6 +15,8 @@ namespace Library.App.ViewModels
 
         public string UserId { get; set; }
 
+        public string UserName { get; set; }
+
         public string Status { get; set; }
 
         public DateTime TakenDate { get; set; }

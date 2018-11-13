@@ -1,0 +1,10 @@
+2018-11-13 14:03:37.5464|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'isAtReadingRoom' of non-nullable type 'System.Boolean' for method 'System.Threading.Tasks.Task`1[System.Web.Mvc.ActionResult] CreateBookOrder(Int32, Boolean)' in 'Library.App.Controllers.OrderController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-13 14:23:55.1118|ERROR|Library.App.Logging.LibraryLogger|Значение не может быть неопределенным.
+Имя параметра: view
+2018-11-13 14:24:36.1953|ERROR|Library.App.Logging.LibraryLogger|Значение не может быть неопределенным.
+Имя параметра: view
+2018-11-13 14:26:50.9173|ERROR|Library.App.Logging.LibraryLogger|Значение не может быть неопределенным.
+Имя параметра: view
+2018-11-13 14:28:11.0672|ERROR|Library.App.Logging.LibraryLogger|Значение не может быть неопределенным.
+Имя параметра: view

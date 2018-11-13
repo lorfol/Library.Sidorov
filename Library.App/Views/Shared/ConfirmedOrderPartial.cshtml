@@ -5,6 +5,9 @@
         @Model.BookName
     </td>
     <td>
+        @Model.UserName
+    </td>
+    <td>
         @Model.TakenDate
     </td>
     <td>
@@ -12,6 +15,12 @@
     </td>
     <td>
         @Model.Status
+
+        @if (Model.IsAtReadingRoom)
+        {
+            <p>In reading room</p>
+        }
+
     </td>
     <td>
         @Model.LateFine$

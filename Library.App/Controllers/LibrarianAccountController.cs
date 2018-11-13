@@ -8,7 +8,6 @@ using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Library.App.Controllers
@@ -35,7 +34,7 @@ namespace Library.App.Controllers
 
         public ActionResult ConfirmedOrders()
         {
-            var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.OnHands).OrderByDescending(ord=>ord.TakenDate).ToList();
+            var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.OnHands || ord.Status == Domain.Core.Enums.OrderStatus.Overdue).OrderByDescending(ord=>ord.TakenDate).ToList();
             var orders = Mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>>(newOrdersFromDb);
 
             return View(orders);
@@ -51,6 +50,9 @@ namespace Library.App.Controllers
             this.unitOfWork.Books.Update(book.Id, book);
             this.unitOfWork.Save();
 
+            var hubContext = GlobalHost.ConnectionManager.GetHubContext<UserOrdersHub>();
+            hubContext.Clients.All.addMessage(new { Id = order.Id, Status = order.Status.ToString() });
+
             return new HttpStatusCodeResult(200);
         }
 
@@ -62,12 +64,12 @@ namespace Library.App.Controllers
             order.ReturnDate = DateTime.Now.AddHours(10);
             this.unitOfWork.Orders.Update(orderId, order);
             this.unitOfWork.Save();
+
             var hubContext = GlobalHost.ConnectionManager.GetHubContext<UserOrdersHub>();
             hubContext.Clients.All.addMessage(new { Id = order.Id, Status = order.Status.ToString() });
 
             return new HttpStatusCodeResult(200);
         }
-
 
         public ActionResult RejectOrder(string orderId)
         {
@@ -79,35 +81,40 @@ namespace Library.App.Controllers
             this.unitOfWork.Books.Update(book.Id, book);
             this.unitOfWork.Save();
 
+            var hubContext = GlobalHost.ConnectionManager.GetHubContext<UserOrdersHub>();
+            hubContext.Clients.All.addMessage(new { Id = order.Id, Status = order.Status.ToString() });
+
             return new HttpStatusCodeResult(200);
         }
 
         public ActionResult ChargeFine() // govno. to servise!
         {
-            DateTime dateTime = DateTime.Now;
-            TimeSpan ts = new TimeSpan(23, 59, 59);
-            dateTime = dateTime.Date + ts;
+            ordersServise.ChargeFine();
 
-            var overdueOrders = this.unitOfWork.Orders
-                .Find(t => t.Status == Domain.Core.Enums.OrderStatus.OnHands)
-                .Where(ord => ord.ReturnDate.Value < dateTime);
+            //DateTime dateTime = DateTime.Now;
+            //TimeSpan ts = new TimeSpan(23, 59, 59);
+            //dateTime = dateTime.Date + ts;
 
-            foreach (var order in overdueOrders)
-            {
-                var penalty = dateTime.Subtract(order.ReturnDate.Value);
-                if (order.LateFine == 0)
-                {
-                    order.LateFine += 1 * penalty.Days;
+            //var overdueOrders = this.unitOfWork.Orders
+            //    .Find(t => t.Status == Domain.Core.Enums.OrderStatus.OnHands)
+            //    .Where(ord => ord.ReturnDate.Value < dateTime).ToList();
 
-                }
-                else
-                {
-                    order.LateFine += 10;
-                }
-                order.Status = Domain.Core.Enums.OrderStatus.Overdue;
-                this.unitOfWork.Orders.Update(order.Id, order);
-                this.unitOfWork.Save();
-            }
+            //foreach (var order in overdueOrders)
+            //{
+            //    var penalty = dateTime.Subtract(order.ReturnDate.Value).Days;
+            //    if (order.LateFine == 0)
+            //    {
+            //        order.LateFine += 10 * penalty;
+
+            //    }
+            //    else
+            //    {
+            //        order.LateFine += 10;
+            //    }
+            //    order.Status = Domain.Core.Enums.OrderStatus.Overdue;
+            //    this.unitOfWork.Orders.Update(order.Id, order);
+            //    this.unitOfWork.Save();
+            //}
 
             return RedirectToAction("ConfirmedOrders");
         }

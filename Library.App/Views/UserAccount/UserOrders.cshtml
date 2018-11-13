@@ -36,10 +36,21 @@ else
                         @order.TakenDate
                     </td>
                     <td>
-                        @order.ReturnDate
+                        @if ((order.Status != "Rejected") && (order.Status != "New"))
+                        {
+                            @order.ReturnDate
+                        }
+                        else
+                        {
+                            <p>-</p>
+                        }
                     </td>
                     <td id="@order.Id">
                         @order.Status
+                        @if (order.IsAtReadingRoom && (order.Status != "Rejected") && (order.Status != "New"))
+                        {
+                            <p>In reading room</p>
+                        }
                     </td>
                     <td>
                         @order.LateFine$

@@ -158,10 +158,11 @@
                             if (item.Count == 0)
                             {
                                 <button class="btn btn-secondary" disabled="disabled" title="Temporarily unavailable">Order</button>
+                                <button class="btn btn-secondary" disabled="disabled" title="Temporarily unavailable">Read</button>
                             }
                             else
                             {
-                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
+                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = false }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
                                 <span>
                                     @Html.ActionLink("Read", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = true }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
                                 </span>

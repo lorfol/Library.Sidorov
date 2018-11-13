@@ -8,6 +8,6 @@ namespace Library.Services.Interfaces
 {
     public interface IOrdersServise
     {
-        int ChargeFine();
+        void ChargeFine();
     }
 }

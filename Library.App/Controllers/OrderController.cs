@@ -54,7 +54,8 @@ namespace Library.App.Controllers
 
             var orderFromDb = this.unitOfWork.Orders.GetById(orderId);
             var orderView = Mapper.Map<Order, OrderViewModel>(orderFromDb);
-            var htmlPartial = this.RenderViewToString(ControllerContext, "OrderPartialView", orderView);
+            orderView.UserName = user.UserName;
+            var htmlPartial = this.RenderViewToString(ControllerContext, "NewOrderPartialView", orderView);
 
             hubContext.Clients.All.addMessage(htmlPartial);
 

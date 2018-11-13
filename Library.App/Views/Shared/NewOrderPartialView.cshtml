@@ -5,10 +5,14 @@
         @Model.BookName
     </td>
     <td>
-        @Model.UserId
+        @Model.UserName
     </td>
     <td>
         @Model.Status
+        @if (Model.IsAtReadingRoom)
+        {
+            <p>In reading room</p>
+        }
     </td>
     <td>
         <button onclick="confirm('@Model.Id')" class="btn btn-success">Confirm</button>

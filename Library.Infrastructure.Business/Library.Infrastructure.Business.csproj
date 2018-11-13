@@ -45,6 +45,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Library.Domain.Core\Library.Domain.Core.csproj">
+      <Project>{185580E4-B191-4415-9C48-8FFA78EDD7A5}</Project>
+      <Name>Library.Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.Domain.Interfaces\Library.Domain.Interfaces.csproj">
+      <Project>{F39C4BDB-BC12-4031-8BDF-B70CABE31D54}</Project>
+      <Name>Library.Domain.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Library.Services.Interfaces\Library.Services.Interfaces.csproj">
       <Project>{b1088ce8-c34e-4cbe-a7f4-02d208e7be60}</Project>
       <Name>Library.Services.Interfaces</Name>
