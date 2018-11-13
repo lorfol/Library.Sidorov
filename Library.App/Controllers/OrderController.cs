@@ -28,7 +28,7 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<ActionResult> CreateBookOrder(int bookId)
+        public async Task<ActionResult> CreateBookOrder(int bookId, bool isAtReadingRoom)
         {
             var hubContext = GlobalHost.ConnectionManager.GetHubContext<OrderHub>();
             var user = await this.UserManager.FindByEmailAsync(this.User.Identity.Name);
@@ -41,7 +41,8 @@ namespace Library.App.Controllers
                 TakenDate = DateTime.Now,
                 LateFine = 0,
                 Status = Domain.Core.Enums.OrderStatus.New,
-                UserId = user.Id
+                UserId = user.Id,
+                IsAtReadingRoom = isAtReadingRoom
             };
 
             this.unitOfWork.Orders.Create(order);

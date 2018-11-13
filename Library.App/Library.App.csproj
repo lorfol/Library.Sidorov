@@ -349,7 +349,7 @@
     <Content Include="Views\AdministratorAccount\ManageUsers.cshtml" />
     <Content Include="Views\AdministratorAccount\ManageLibrarians.cshtml" />
     <Content Include="Views\LibrarianAccount\NewOrders.cshtml" />
-    <Content Include="Views\Shared\OrderPartialView.cshtml" />
+    <Content Include="Views\Shared\NewOrderPartialView.cshtml" />
     <Content Include="Views\LibrarianAccount\ConfirmedOrders.cshtml" />
     <Content Include="Views\Shared\ConfirmedOrderPartial.cshtml" />
     <Content Include="Views\AdministratorAccount\ManageCreateBook.cshtml" />
@@ -384,9 +384,17 @@
       <Project>{F39C4BDB-BC12-4031-8BDF-B70CABE31D54}</Project>
       <Name>Library.Domain.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Library.Infrastructure.Business\Library.Infrastructure.Business.csproj">
+      <Project>{9C2946BA-2A89-4D01-87F3-8CE918ECCD59}</Project>
+      <Name>Library.Infrastructure.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Library.Infrastructure.Data\Library.Infrastructure.Data.csproj">
       <Project>{5AA57F90-26AF-4842-94D2-6D5072E78243}</Project>
       <Name>Library.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.Services.Interfaces\Library.Services.Interfaces.csproj">
+      <Project>{B1088CE8-C34E-4CBE-A7F4-02D208E7BE60}</Project>
+      <Name>Library.Services.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

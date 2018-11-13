@@ -3,6 +3,7 @@ using Library.App.Hubs;
 using Library.App.ViewModels;
 using Library.Domain.Core.Models;
 using Library.Domain.Interfaces;
+using Library.Services.Interfaces;
 using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,13 @@ namespace Library.App.Controllers
     [System.Web.Mvc.Authorize(Roles = "librarian")]
     public class LibrarianAccountController : Controller
     {
-        IUnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
+        private readonly IOrdersServise ordersServise;
 
-        public LibrarianAccountController(IUnitOfWork unitOfWork)
+        public LibrarianAccountController(IUnitOfWork unitOfWork, IOrdersServise ordersServise)
         {
             this.unitOfWork = unitOfWork;
+            this.ordersServise = ordersServise;
         }
 
         public ActionResult NewOrders()
@@ -77,6 +80,36 @@ namespace Library.App.Controllers
             this.unitOfWork.Save();
 
             return new HttpStatusCodeResult(200);
+        }
+
+        public ActionResult ChargeFine() // govno. to servise!
+        {
+            DateTime dateTime = DateTime.Now;
+            TimeSpan ts = new TimeSpan(23, 59, 59);
+            dateTime = dateTime.Date + ts;
+
+            var overdueOrders = this.unitOfWork.Orders
+                .Find(t => t.Status == Domain.Core.Enums.OrderStatus.OnHands)
+                .Where(ord => ord.ReturnDate.Value < dateTime);
+
+            foreach (var order in overdueOrders)
+            {
+                var penalty = dateTime.Subtract(order.ReturnDate.Value);
+                if (order.LateFine == 0)
+                {
+                    order.LateFine += 1 * penalty.Days;
+
+                }
+                else
+                {
+                    order.LateFine += 10;
+                }
+                order.Status = Domain.Core.Enums.OrderStatus.Overdue;
+                this.unitOfWork.Orders.Update(order.Id, order);
+                this.unitOfWork.Save();
+            }
+
+            return RedirectToAction("ConfirmedOrders");
         }
     }
 

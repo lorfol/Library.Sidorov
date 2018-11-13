@@ -162,6 +162,9 @@
                             else
                             {
                                 @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
+                                <span>
+                                    @Html.ActionLink("Read", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = true }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
+                                </span>
                             }
                         }
                     </td>
@@ -189,11 +192,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    Where are you want to read the book?
                 </div>
                 <div class="modal-footer">
                     <button id="order_1" onclick="order(false)" type="button" class="btn btn-primary">In reading room</button>
-                    <button id="order_2" onclick="order(true)" type="button" class="btn btn-primary">Order</button>
+                    <button id="order_2" onclick="order(true)" type="button" class="btn btn-primary">On hands</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
