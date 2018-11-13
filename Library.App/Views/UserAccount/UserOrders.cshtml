@@ -66,9 +66,9 @@ else
 <script>
     $(function () {
         // Ссылка на автоматически-сгенерированный прокси хаба
-        var chat = $.connection.userOrdersHub;
+        var message = $.connection.userOrdersHub;
         // Объявление функции, которая хаб вызывает при получении сообщений
-        chat.client.addMessage = function (order) {
+        message.client.addMessage = function (order) {
             debugger;
             // Добавление сообщений на веб-страницу
             let ord = document.getElementById(order.Id);

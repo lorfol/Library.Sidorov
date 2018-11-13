@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Library.App.Utils.Validation
 {
-    public class MinValueAttribute : ValidationAttribute
+    public class MinValueAttribute : ValidationAttribute // TODO : remove mb or fix
     {
         private readonly int _minValue;
 

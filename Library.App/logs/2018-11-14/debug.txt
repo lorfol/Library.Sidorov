@@ -1,0 +1,30 @@
+2018-11-14 00:37:46.9012|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/AdministratorAccount/ManageCreateBook
+2018-11-14 00:37:47.2803|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-14 00:37:47.6426|DEBUG|Library.App.Logging.LibraryLogger|Current User: lorfol2802@gmail.com
+2018-11-14 00:38:09.4424|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 14.11.2018 0:37:41
+-----------------
+2018-11-14 00:40:19.9034|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/AdministratorAccount/ManageCreateBook
+2018-11-14 00:40:20.0654|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-14 00:40:20.0844|DEBUG|Library.App.Logging.LibraryLogger|Current User: lorfol2802@gmail.com
+2018-11-14 00:40:22.5493|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 14.11.2018 0:40:19
+-----------------
+2018-11-14 00:41:25.3219|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/AdministratorAccount/ManageCreateBook
+2018-11-14 00:41:25.4429|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-14 00:41:25.4629|DEBUG|Library.App.Logging.LibraryLogger|Current User: lorfol2802@gmail.com
+2018-11-14 00:41:27.6439|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 14.11.2018 0:41:24
+-----------------
+2018-11-14 00:41:39.1286|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/AdministratorAccount/ManageCreateBook
+2018-11-14 00:41:39.2576|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-14 00:41:39.3296|DEBUG|Library.App.Logging.LibraryLogger|Current User: lorfol2802@gmail.com
+2018-11-14 00:41:41.5126|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 14.11.2018 0:41:38
+-----------------
+2018-11-14 00:41:52.7146|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/AdministratorAccount/ManageCreateBook
+2018-11-14 00:41:52.8946|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-14 00:41:52.9136|DEBUG|Library.App.Logging.LibraryLogger|Current User: lorfol2802@gmail.com
+2018-11-14 00:41:54.9935|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 14.11.2018 0:41:52
+-----------------
+2018-11-14 00:42:12.8027|DEBUG|Library.App.Logging.LibraryLogger|Request started: http://localhost:56121/AdministratorAccount/ManageCreateBook
+2018-11-14 00:42:13.1207|DEBUG|Library.App.Logging.LibraryLogger|Request finished
+2018-11-14 00:42:13.1467|DEBUG|Library.App.Logging.LibraryLogger|Current User: lorfol2802@gmail.com
+2018-11-14 00:42:15.1929|DEBUG|Library.App.Logging.LibraryLogger|Time of current HTTP Request: 14.11.2018 0:42:12
+-----------------

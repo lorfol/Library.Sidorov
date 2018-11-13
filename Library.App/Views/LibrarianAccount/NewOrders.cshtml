@@ -53,9 +53,9 @@
 
     $(function () {
         // Ссылка на автоматически-сгенерированный прокси хаба
-        var chat = $.connection.orderHub;
+        var message = $.connection.orderHub;
         // Объявление функции, которая хаб вызывает при получении сообщений
-        chat.client.addMessage = function (order) {
+        message.client.addMessage = function (order) {
             debugger;
             // Добавление сообщений на веб-страницу
             let ord = document.getElementById('order');

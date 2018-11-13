@@ -2,9 +2,7 @@ namespace Library.Infrastructure.Data.Migrations
 {
     using Library.Domain.Core.Models;
     using Newtonsoft.Json;
-    using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.IO;
     using System.Linq;
@@ -73,8 +71,6 @@ namespace Library.Infrastructure.Data.Migrations
 
                 context.SaveChanges();
             }
-
-
         }
     }
 }

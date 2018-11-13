@@ -7,16 +7,14 @@ using Library.Infrastructure.Data;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.SignalR;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace Library.App.Controllers
 {
-    [System.Web.Mvc.Authorize]
+    [System.Web.Mvc.Authorize(Roles = "user")]
     public class OrderController : Controller
     {
         IUnitOfWork unitOfWork;
@@ -51,12 +49,11 @@ namespace Library.App.Controllers
             this.unitOfWork.Books.Update(bookId, book);
             this.unitOfWork.Save();
 
-
             var orderFromDb = this.unitOfWork.Orders.GetById(orderId);
             var orderView = Mapper.Map<Order, OrderViewModel>(orderFromDb);
             orderView.UserName = user.UserName;
-            var htmlPartial = this.RenderViewToString(ControllerContext, "NewOrderPartialView", orderView);
 
+            var htmlPartial = this.RenderViewToString(ControllerContext, "NewOrderPartialView", orderView);
             hubContext.Clients.All.addMessage(htmlPartial);
 
             return RedirectToAction("UserOrders", "UserAccount");
@@ -71,10 +68,12 @@ namespace Library.App.Controllers
             return this.Json(2, JsonRequestBehavior.AllowGet);
         }
 
-        public string RenderViewToString(ControllerContext context, string viewName, object model)
+        private string RenderViewToString(ControllerContext context, string viewName, object model)
         {
             if (string.IsNullOrEmpty(viewName))
+            {
                 viewName = context.RouteData.GetRequiredString("action");
+            }
 
             var viewData = new ViewDataDictionary(model);
 

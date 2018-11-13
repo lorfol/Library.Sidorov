@@ -14,7 +14,7 @@ namespace Library.Infrastructure.Data.Repositories
 
         public override Order GetById(object id)
         {
-            return this.entities.Include(f => f.Book).FirstOrDefault(z=>z.Id == id.ToString());
+            return this.entities.Include(f => f.Book).FirstOrDefault(z => z.Id == id.ToString());
         }
     }
 }

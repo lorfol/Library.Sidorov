@@ -4,7 +4,6 @@ using Library.Infrastructure.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -18,14 +17,12 @@ namespace Library.App.Controllers
 
         private IAuthenticationManager AuthenticationManager => HttpContext.GetOwinContext().Authentication;
 
-        [AllowAnonymous]
         public ActionResult Register()
         {
             return View("Register");
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<ActionResult> Register(RegisterModel model)
         {
             if (ModelState.IsValid)
@@ -59,42 +56,40 @@ namespace Library.App.Controllers
             return View(model);
         }
 
-        [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login()
         {
-            ViewBag.returnUrl = returnUrl;
             return View("Login");
         }
 
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginModel model, string returnUrl)
+        public async Task<ActionResult> Login(LoginModel model)
         {
             if (ModelState.IsValid)
             {
                 User user = UserManager.Find(model.Email, model.Password);
+
                 if (user == null)
                 {
                     ModelState.AddModelError("", "Wrong email or password.");
                 }
                 else
                 {
-                    ClaimsIdentity claim = await UserManager.CreateIdentityAsync(user,
-                                            DefaultAuthenticationTypes.ApplicationCookie);
+                    ClaimsIdentity claim = await UserManager
+                        .CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
                     AuthenticationManager.SignOut();
                     AuthenticationManager.SignIn(new AuthenticationProperties
                     {
                         IsPersistent = true
                     }, claim);
-                    if (String.IsNullOrEmpty(returnUrl))
-                        return RedirectToAction("Index", "Home");
-                    return Redirect(returnUrl);
+
+                    return RedirectToAction("Index", "Home");
                 }
             }
-            ViewBag.returnUrl = returnUrl;
             return View(model);
         }
+
+        [Authorize]
         public ActionResult Logout()
         {
             AuthenticationManager.SignOut();

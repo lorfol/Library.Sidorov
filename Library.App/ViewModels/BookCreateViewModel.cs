@@ -1,11 +1,6 @@
-﻿using Library.App.Utils.Validation;
-using Library.Domain.Core.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Library.App.ViewModels
@@ -29,7 +24,7 @@ namespace Library.App.ViewModels
 
         public string Description { get; set; }
 
-        //[IntegerValidator(MinValue = 0)]
+        [Range(0, int.MaxValue, ErrorMessage = "From 0 to int.MaxValue")]
         public int Count { get; set; }
 
         public string PublicationYear { get; set; }

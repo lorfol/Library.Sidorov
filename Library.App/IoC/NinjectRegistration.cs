@@ -3,7 +3,6 @@ using Library.Infrastructure.Business;
 using Library.Infrastructure.Data;
 using Library.Services.Interfaces;
 using Ninject.Modules;
-using System.Web.ModelBinding;
 
 namespace Library.App.IoC
 {

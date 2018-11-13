@@ -2,14 +2,9 @@
 using Library.App.ViewModels;
 using Library.Domain.Core.Models;
 using Library.Domain.Interfaces;
-using Library.Infrastructure.Data;
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using PagedList.Mvc;
 using PagedList;
 using System.Linq.Dynamic;
 

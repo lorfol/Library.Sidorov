@@ -1,6 +1,4 @@
-﻿using Library.Domain.Core.Enums;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Library.Domain.Core.Models
 {

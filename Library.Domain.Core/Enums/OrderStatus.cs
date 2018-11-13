@@ -9,7 +9,3 @@
         Closed = 4
     }
 }
-//             InProgress = 0,
-//             Rejected = 1,
-//             Confirmed = 2,
-//             Closed = 3

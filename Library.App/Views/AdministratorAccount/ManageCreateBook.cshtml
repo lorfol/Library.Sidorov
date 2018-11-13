@@ -54,14 +54,18 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SelectedAuthors, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.ListBox("SelectedAuthors", Model.MultiSelectedAuthors, new { @class = "chzn-select", data_placeholder = "Authors..."})
+                @Html.ListBox("SelectedAuthors", Model.MultiSelectedAuthors, new { @class = "chzn-select", data_placeholder = "Authors..." })
+                @Html.ValidationMessageFor(model => model.SelectedAuthors, "", new { @class = "text-danger" })
+
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.SelectedPublisher, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(m => m.SelectedPublisher, Model.SelectedPublishers)
+                @Html.DropDownListFor(m => m.SelectedPublisher, Model.SelectedPublishers, "Not selected", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SelectedPublisher, "", new { @class = "text-danger" })
+
             </div>
         </div>
 

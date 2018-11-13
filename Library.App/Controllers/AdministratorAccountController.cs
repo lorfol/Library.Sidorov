@@ -1,11 +1,8 @@
 ﻿using Library.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Linq.Dynamic;
-using PagedList;
 using Library.Domain.Core.Models;
 using Microsoft.AspNet.Identity;
 using System.Threading.Tasks;
@@ -73,8 +70,14 @@ namespace Library.App.Controllers
             {
                 return new HttpStatusCodeResult(422);
             }
+
             var newBook = Mapper.Map<BookCreateViewModel, Book>(book);
-            newBook.Authors = this.unitOfWork.Authors.Find(f => book.SelectedAuthors.Any(p => p == f.Id)).ToList();
+
+            if (book.SelectedAuthors != null)
+            {
+                newBook.Authors = this.unitOfWork.Authors.Find(f => book.SelectedAuthors.Any(p => p == f.Id)).ToList();
+            }
+
             this.unitOfWork.Books.Create(newBook);
             this.unitOfWork.Save();
 
