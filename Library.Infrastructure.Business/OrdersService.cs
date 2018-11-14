@@ -21,8 +21,8 @@ namespace Library.Infrastructure.Business
             dateTime = dateTime.Date + ts;
 
             var overdueOrders = this.unitOfWork.Orders
-                .Find(t => t.Status == Domain.Core.Enums.OrderStatus.OnHands)
-                .Where(ord => ord.ReturnDate.Value < dateTime).ToList();
+                .Find(t => t.Status == Domain.Core.Enums.OrderStatus.OnHands &&
+                t.ReturnDate < dateTime).ToList();
 
             foreach (var order in overdueOrders)
             {
