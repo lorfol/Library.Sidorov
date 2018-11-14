@@ -28,6 +28,11 @@ namespace Library.App.Controllers
 
         public async Task<ActionResult> CreateBookOrder(int bookId, bool isAtReadingRoom)
         {
+            if (User.IsInRole("banned"))
+            {
+                return View("BanMessage");
+            }
+            
             var hubContext = GlobalHost.ConnectionManager.GetHubContext<OrderHub>();
             var user = await this.UserManager.FindByEmailAsync(this.User.Identity.Name);
             var orderId = Guid.NewGuid().ToString();
@@ -59,14 +64,14 @@ namespace Library.App.Controllers
             return RedirectToAction("UserOrders", "UserAccount");
         }
 
-        [HttpGet]
-        public ActionResult GetCountOfOrders()
-        {
-            var user = this.HttpContext.User;
-            this.unitOfWork.Orders.Find(f => f.User.Name == user.Identity.Name);
+        //[HttpGet]
+        //public ActionResult GetCountOfOrders()
+        //{
+        //    var user = this.HttpContext.User;
+        //    this.unitOfWork.Orders.Find(f => f.User.Name == user.Identity.Name);
 
-            return this.Json(2, JsonRequestBehavior.AllowGet);
-        }
+        //    return this.Json(2, JsonRequestBehavior.AllowGet);
+        //}
 
         private string RenderViewToString(ControllerContext context, string viewName, object model)
         {

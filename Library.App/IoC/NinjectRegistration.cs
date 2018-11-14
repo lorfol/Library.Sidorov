@@ -11,7 +11,7 @@ namespace Library.App.IoC
         public override void Load()
         {
             Bind<IUnitOfWork>().To<UnitOfWork>();
-            Bind<IOrdersServise>().To<OrdersServise>();
+            Bind<IOrdersService>().To<OrdersService>();
         }
     }
 }

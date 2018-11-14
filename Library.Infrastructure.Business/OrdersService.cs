@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace Library.Infrastructure.Business
 {
-    public class OrdersServise : IOrdersServise
+    public class OrdersService : IOrdersService
     {
         private readonly IUnitOfWork unitOfWork;
 
-        public OrdersServise(IUnitOfWork unitOfWork)
+        public OrdersService(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
         }
@@ -27,15 +27,16 @@ namespace Library.Infrastructure.Business
             foreach (var order in overdueOrders)
             {
                 var penalty = dateTime.Subtract(order.ReturnDate.Value).Days;
+
                 if (order.LateFine == 0)
                 {
                     order.LateFine += 10 * penalty;
-
                 }
                 else
                 {
                     order.LateFine += 10;
                 }
+
                 order.Status = Domain.Core.Enums.OrderStatus.Overdue;
                 this.unitOfWork.Orders.Update(order.Id, order);
                 this.unitOfWork.Save();

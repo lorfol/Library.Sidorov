@@ -20,7 +20,7 @@ namespace Library.App.ViewModels
 
         public SelectList SelectedPublishers { get; set; }
 
-        public int SelectedPublisher { get; set; }
+        public int? SelectedPublisher { get; set; }
 
         public string Description { get; set; }
 

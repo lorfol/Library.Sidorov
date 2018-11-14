@@ -21,11 +21,10 @@ namespace Library.App.ViewModels
 
         public SelectList SelectedPublishers { get; set; }
 
-        public int SelectedPublisher { get; set; }
+        public int? SelectedPublisher { get; set; }
 
         public string Description { get; set; }
 
-         // TODO: !!!!!!!!!!! atrib
         public int Count { get; set; }
 
         public string PublicationYear { get; set; }

@@ -14,7 +14,7 @@ namespace Library.Domain.Core.Models
 
         public virtual List<Author> Authors { get; set; }
 
-        public int PublisherId { get; set; }
+        public int? PublisherId { get; set; }
 
         public virtual Publisher Publisher { get; set; }
 

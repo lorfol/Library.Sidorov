@@ -14,13 +14,14 @@
         @Html.ActionLink("Add new Author", "ManageCreateAuthor", "AdministratorAccount", null, new { @class = "btn btn-primary" })
     </span>
     @Html.ActionLink("Add new Publisher", "ManageCreatePublisher", "AdministratorAccount", null, new { @class = "btn btn-primary" })
+    <br />
 }
-<br />
 <br />
 @using (Html.BeginForm("Index", "Home", FormMethod.Get))
 {
     @Html.TextBox("search", String.Empty, new { @class = "form-control", @placeholder = "Search by Name/Author", @value = "search" });
 }
+<br />
 
 <table class="table table-striped">
     <thead>
@@ -130,13 +131,34 @@
                         @item.Name
                     </td>
                     <td>
-                        @item.Author
+                        @if (string.IsNullOrEmpty(item.Author))
+                        {
+                            <p>-</p>
+                        }
+                        else
+                        {
+                            @item.Author
+                        }
                     </td>
                     <td>
-                        @item.Publisher
+                        @if (string.IsNullOrEmpty(item.Publisher))
+                        {
+                            <p>-</p>
+                        }
+                        else
+                        {
+                            @item.Publisher
+                        }
                     </td>
                     <td>
-                        @item.PublicationYear
+                        @if (string.IsNullOrEmpty(item.PublicationYear))
+                        {
+                            <p>-</p>
+                        }
+                        else
+                        {
+                            @item.PublicationYear
+                        }
                     </td>
                     <td>
                         @item.Count
@@ -162,9 +184,9 @@
                             }
                             else
                             {
-                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = false }, new { @class = "btn btn-success"})
+                                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = false }, new { @class = "btn btn-success" })
                                 <span>
-                                    @Html.ActionLink("Read", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = true }, new { @class = "btn btn-success"})
+                                    @Html.ActionLink("Read", "CreateBookOrder", "Order", new { bookId = item.Id, isAtReadingRoom = true }, new { @class = "btn btn-success" })
                                 </span>
                             }
                         }

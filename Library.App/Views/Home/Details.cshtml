@@ -67,7 +67,7 @@
             }
             else
             {
-                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = Model.Id }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Order", "CreateBookOrder", "Order", new { bookId = Model.Id, isAtReadingRoom = false }, new { @class = "btn btn-success" })
                 <span>
                     @Html.ActionLink("Read", "CreateBookOrder", "Order", new { bookId = Model.Id, isAtReadingRoom = true }, new { @class = "btn btn-success", data_dialog_title = "Book ordering" })
                 </span>

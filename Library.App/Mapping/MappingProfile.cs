@@ -7,7 +7,7 @@ namespace Library.App.Mapping
 {
     public class MappingProfile : Profile
     {
-        public MappingProfile() // TODO: create map
+        public MappingProfile()
         {
             CreateMap<Book, BookViewModel>()
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src => string.Join(", ", src.Authors.OrderBy(a => a.Name).Select(z => z.Name))))

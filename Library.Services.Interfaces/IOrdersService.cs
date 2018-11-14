@@ -1,6 +1,6 @@
 ﻿namespace Library.Services.Interfaces
 {
-    public interface IOrdersServise
+    public interface IOrdersService
     {
         void ChargeFine();
     }

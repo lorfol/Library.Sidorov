@@ -16,12 +16,12 @@ namespace Library.App.Controllers
     public class LibrarianAccountController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly IOrdersServise ordersServise;
+        private readonly IOrdersService ordersService;
 
-        public LibrarianAccountController(IUnitOfWork unitOfWork, IOrdersServise ordersServise)
+        public LibrarianAccountController(IUnitOfWork unitOfWork, IOrdersService ordersService)
         {
             this.unitOfWork = unitOfWork;
-            this.ordersServise = ordersServise;
+            this.ordersService = ordersService;
         }
 
         public ActionResult NewOrders()
@@ -66,7 +66,7 @@ namespace Library.App.Controllers
             this.unitOfWork.Save();
 
             var hubContext = GlobalHost.ConnectionManager.GetHubContext<UserOrdersHub>();
-            hubContext.Clients.All.addMessage(new { Id = order.Id, Status = order.Status.ToString() });
+            hubContext.Clients.All.addMessage( new { Id = order.Id, Status = order.Status.ToString() });
 
             return new HttpStatusCodeResult(200);
         }
@@ -89,7 +89,7 @@ namespace Library.App.Controllers
 
         public ActionResult ChargeFine()
         {
-            ordersServise.ChargeFine();
+            ordersService.ChargeFine();
 
             return RedirectToAction("ConfirmedOrders");
         }

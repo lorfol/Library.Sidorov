@@ -30,8 +30,8 @@ namespace Library.App.Controllers
         {
             BookCreateViewModel viewModel = new BookCreateViewModel();
 
-            var authors = this.unitOfWork.Authors.GetAll().ToList();
-            var publishers = this.unitOfWork.Publishers.GetAll().ToList();
+            var authors = this.unitOfWork.Authors.GetAll().OrderBy(a => a.Name).ToList();
+            var publishers = this.unitOfWork.Publishers.GetAll().OrderBy(p => p.Name).ToList();
 
             viewModel.MultiSelectedAuthors = new MultiSelectList(authors, "Id", "Name");
             viewModel.SelectedPublishers = new SelectList(publishers, "Id", "Name");
@@ -47,8 +47,8 @@ namespace Library.App.Controllers
 
             viewModel = Mapper.Map<Book, BookUpdateViewModel>(book);
 
-            var authors = this.unitOfWork.Authors.GetAll().ToList();
-            var publishers = this.unitOfWork.Publishers.GetAll().ToList();
+            var authors = this.unitOfWork.Authors.GetAll().OrderBy(a => a.Name).ToList();
+            var publishers = this.unitOfWork.Publishers.GetAll().OrderBy(p => p.Name).ToList();
 
             viewModel.SelectedPublishers = new SelectList(publishers, "Id", "Name", book.PublisherId);
 
@@ -94,9 +94,14 @@ namespace Library.App.Controllers
             var bookFromDb = this.unitOfWork.Books.GetById(book.Id);
             Mapper.Map<BookUpdateViewModel, Book>(book, bookFromDb);
             bookFromDb.Authors.RemoveAll(a => book.SelectedAuthors.All(f => f != a.Id));
-            var newAuthorsIds = book.SelectedAuthors.Except(bookFromDb.Authors.Select(s => s.Id));
-            var newAuthors = this.unitOfWork.Authors.Find(f => newAuthorsIds.Any(a => a == f.Id));
-            bookFromDb.Authors.AddRange(newAuthors);
+
+            if (book.SelectedAuthors != null)
+            {
+                var newAuthorsIds = book.SelectedAuthors.Except(bookFromDb.Authors.Select(s => s.Id));
+                var newAuthors = this.unitOfWork.Authors.Find(f => newAuthorsIds.Any(a => a == f.Id));
+                bookFromDb.Authors.AddRange(newAuthors);
+            }
+
             this.unitOfWork.Books.Update(bookFromDb.Id, bookFromDb);
             this.unitOfWork.Save();
 

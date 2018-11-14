@@ -1,0 +1,9 @@
+2018-11-14 11:43:22.9683|ERROR|Library.App.Logging.LibraryLogger|Значение не может быть неопределенным.
+Имя параметра: source
+2018-11-14 12:13:38.1635|ERROR|Library.App.Logging.LibraryLogger|D:\VS_Projects\Library\Library.App\Views\AdministratorAccount\ManageUpdateBook.cshtml(61): error CS1738: Named argument specifications must appear after all fixed arguments have been specified. Please use language version 7.2 or greater to allow non-trailing named arguments.
+2018-11-14 14:27:35.4210|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'isAtReadingRoom' of non-nullable type 'System.Boolean' for method 'System.Threading.Tasks.Task`1[System.Web.Mvc.ActionResult] CreateBookOrder(Int32, Boolean)' in 'Library.App.Controllers.OrderController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-14 14:27:52.8043|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'isAtReadingRoom' of non-nullable type 'System.Boolean' for method 'System.Threading.Tasks.Task`1[System.Web.Mvc.ActionResult] CreateBookOrder(Int32, Boolean)' in 'Library.App.Controllers.OrderController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
+2018-11-14 14:28:28.7346|ERROR|Library.App.Logging.LibraryLogger|The parameters dictionary contains a null entry for parameter 'isAtReadingRoom' of non-nullable type 'System.Boolean' for method 'System.Threading.Tasks.Task`1[System.Web.Mvc.ActionResult] CreateBookOrder(Int32, Boolean)' in 'Library.App.Controllers.OrderController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters
