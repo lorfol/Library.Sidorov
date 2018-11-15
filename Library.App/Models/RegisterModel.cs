@@ -9,10 +9,12 @@ namespace Library.App.Models
     public class RegisterModel
     {
         [Required]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Invalid name. Use [a-zA-Z]")]
+        [StringLength(30, MinimumLength = 2)]
         public string Name { get; set; }
 
         [Required]
-        [DataType(DataType.EmailAddress)]
+        [RegularExpression(@"^([\w\.\-]+)\@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Invalid Email")]
         public string Email { get; set; }
 
         [Required]

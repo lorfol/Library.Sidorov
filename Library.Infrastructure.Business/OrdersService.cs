@@ -14,6 +14,7 @@ namespace Library.Infrastructure.Business
             this.unitOfWork = unitOfWork;
         }
 
+        // Charge late fine (10 per day) to all orders with status 'OnHands' where 'ReturnDate' is less than end of current date
         public void ChargeFine()
         {
             DateTime dateTime = DateTime.Now;
@@ -21,7 +22,7 @@ namespace Library.Infrastructure.Business
             dateTime = dateTime.Date + ts;
 
             var overdueOrders = this.unitOfWork.Orders
-                .Find(t => t.Status == Domain.Core.Enums.OrderStatus.OnHands &&
+                .Find(t => (t.Status == Domain.Core.Enums.OrderStatus.OnHands || t.Status == Domain.Core.Enums.OrderStatus.Overdue) &&
                 t.ReturnDate < dateTime).ToList();
 
             foreach (var order in overdueOrders)
@@ -39,8 +40,9 @@ namespace Library.Infrastructure.Business
 
                 order.Status = Domain.Core.Enums.OrderStatus.Overdue;
                 this.unitOfWork.Orders.Update(order.Id, order);
-                this.unitOfWork.Save();
             }
+
+            this.unitOfWork.Save();
         }
     }
 }

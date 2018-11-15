@@ -24,6 +24,7 @@ namespace Library.App.Controllers
             this.ordersService = ordersService;
         }
 
+        // show new orders for librarian
         public ActionResult NewOrders()
         {
             var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.New).ToList();
@@ -32,6 +33,7 @@ namespace Library.App.Controllers
             return View(orders);
         }
 
+        // show confirmed order for librarian
         public ActionResult ConfirmedOrders()
         {
             var newOrdersFromDb = this.unitOfWork.Orders.Find(ord => ord.Status == Domain.Core.Enums.OrderStatus.OnHands || ord.Status == Domain.Core.Enums.OrderStatus.Overdue).OrderByDescending(ord=>ord.TakenDate).ToList();
@@ -40,6 +42,7 @@ namespace Library.App.Controllers
             return View(orders);
         }
 
+        // close order (when book returned)
         public ActionResult CloseOrder(string orderId)
         {
             var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
@@ -56,6 +59,7 @@ namespace Library.App.Controllers
             return new HttpStatusCodeResult(200);
         }
 
+        // confirm user order
         public ActionResult ConfirmOrder(string orderId)
         {
             var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
@@ -71,6 +75,7 @@ namespace Library.App.Controllers
             return new HttpStatusCodeResult(200);
         }
 
+        // reject user order
         public ActionResult RejectOrder(string orderId)
         {
             var order = this.unitOfWork.Orders.Find(f => f.Id == orderId).FirstOrDefault();
@@ -87,6 +92,7 @@ namespace Library.App.Controllers
             return new HttpStatusCodeResult(200);
         }
 
+        // call service to calculate the debt for orders
         public ActionResult ChargeFine()
         {
             ordersService.ChargeFine();

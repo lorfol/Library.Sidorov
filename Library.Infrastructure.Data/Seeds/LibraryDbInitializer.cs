@@ -12,6 +12,7 @@ namespace Library.Infrastructure.Data.Seeds
 {
     public class LibraryDbInitializer : CreateDatabaseIfNotExists<LibraryDbContext>
     {
+        // Seeding start data from json file and roles
         protected override void Seed(LibraryDbContext dbContext)
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(dbContext));
@@ -28,7 +29,6 @@ namespace Library.Infrastructure.Data.Seeds
 
             if (!dbContext.Authors.Any())
             {
-                string file = HostingEnvironment.MapPath(@"/Library.Infrastructure.Data/Seeds/JsonData/AuthorsStartData.json");
                 string p = "..\\Library\\Library.Infrastructure.Data\\Seeds\\JsonData\\AuthorsStartData.json";
                 string path = @"D:\VS_Projects\Library\Library.Infrastructure.Data\Seeds\JsonData\AuthorsStartData.json";
                 var authors = JsonConvert.DeserializeObject<IEnumerable<Author>>(File.ReadAllText(path));
@@ -42,7 +42,6 @@ namespace Library.Infrastructure.Data.Seeds
 
             if (!dbContext.Publishers.Any())
             {
-                string file = HostingEnvironment.MapPath(@"/Library.Infrastructure.Data/Seeds/JsonData/AuthorsStartData.json");
                 string p = "..\\Library\\Library.Infrastructure.Data\\Seeds\\JsonData\\AuthorsStartData.json";
                 string path = @"D:\VS_Projects\Library\Library.Infrastructure.Data\Seeds\JsonData\PublishersStartData.json";
                 var publishers = JsonConvert.DeserializeObject<IEnumerable<Publisher>>(File.ReadAllText(path));

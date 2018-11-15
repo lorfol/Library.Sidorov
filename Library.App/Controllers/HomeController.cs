@@ -19,6 +19,8 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
+        // return view to display list of books with paging
+        // searching and ordering books
         public ActionResult Index(string search, int? page, string orderBy = "Name", string orderDirection = "asc")
         {
             IPagedList<BookViewModel> listOfBooks;
@@ -30,8 +32,8 @@ namespace Library.App.Controllers
             {
                 var authors = this.unitOfWork.Books.GetAll().SelectMany(b => b.Authors).ToList();
                 var orderedAuthors = authors.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
-                var unicAuthors = orderedAuthors.SelectMany(s => s.Books).Distinct();
-                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(unicAuthors).ToPagedList(page ?? 1, 10);
+                var unicBooks = orderedAuthors.SelectMany(s => s.Books).Distinct();
+                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(unicBooks).ToPagedList(page ?? 1, 10);
 
                 return View(listOfBooks);
             }
@@ -40,8 +42,8 @@ namespace Library.App.Controllers
             {
                 var publishers = this.unitOfWork.Books.GetAll().Select(b => b.Publisher).ToList();
                 var orderedPublishers = publishers.OrderBy(string.Join(" ", "Name", orderDirection)).Distinct().ToList();
-                var unicPublichers = orderedPublishers.SelectMany(s => s.Books).Distinct();
-                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(unicPublichers).ToPagedList(page ?? 1, 10);
+                var unicBooks = orderedPublishers.SelectMany(s => s.Books).Distinct();
+                listOfBooks = Mapper.Map<IEnumerable<Book>, IEnumerable<BookViewModel>>(unicBooks).ToPagedList(page ?? 1, 10);
 
                 return View(listOfBooks);
             }
@@ -62,7 +64,7 @@ namespace Library.App.Controllers
             }
         }
 
-
+        // return view details about book
         public ActionResult Details(int bookId)
         {
             var bookFromDb = unitOfWork.Books.GetById(bookId);

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Library.App.Logging
 {
+    // contains overrided methods to write info in log file
     public class LogHttpRequest : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)

@@ -19,6 +19,7 @@ namespace Library.App.App_Start
                 LoginPath = new PathString("/Account/Login"),
             });
 
+            // config SignalR
             app.MapSignalR();
         }
     }

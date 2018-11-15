@@ -4,7 +4,8 @@ namespace Library.App.Logging
 {
     public class CustomHandleErrorAttribute : HandleErrorAttribute
     {
-        public override void OnException(ExceptionContext filterContext) // TODO: достать больше инфы из исключения
+        // custom attribute that write information about exeption into log file
+        public override void OnException(ExceptionContext filterContext)
         {
             LibraryLogger.logger.Error(filterContext.Exception, filterContext.Exception.Message);
             base.OnException(filterContext);

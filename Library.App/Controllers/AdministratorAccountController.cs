@@ -26,6 +26,7 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
+        // return view for creating new book
         public ActionResult ManageCreateBook()
         {
             BookCreateViewModel viewModel = new BookCreateViewModel();
@@ -39,6 +40,7 @@ namespace Library.App.Controllers
             return View(viewModel);
         }
 
+        // return view for updating book
         public ActionResult ManageUpdateBook(int bookId)
         {
             BookUpdateViewModel viewModel = new BookUpdateViewModel();
@@ -63,6 +65,7 @@ namespace Library.App.Controllers
             return View(viewModel);
         }
 
+        // creating new book and save it in db
         [HttpPost]
         public ActionResult CreateBook(BookCreateViewModel book)
         {
@@ -84,6 +87,7 @@ namespace Library.App.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        // updating new book and save it in db
         [HttpPost]
         public ActionResult UpdateBook(BookUpdateViewModel book)
         {
@@ -108,6 +112,7 @@ namespace Library.App.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        // delete book from db
         public ActionResult DeleteBook(int bookId)
         {
             this.unitOfWork.Books.Delete(this.unitOfWork.Books.GetById(bookId));
@@ -116,6 +121,7 @@ namespace Library.App.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        // return form for creating new author
         public ActionResult ManageCreateAuthor()
         {
             AuthorCreateViewModel authorCreateViewModel = new AuthorCreateViewModel();
@@ -123,6 +129,7 @@ namespace Library.App.Controllers
             return View(authorCreateViewModel);
         }
 
+        // return form for creating new publisher
         public ActionResult ManageCreatePublisher()
         {
             PublisherCreateViewModel publisherCreateViewModel = new PublisherCreateViewModel();
@@ -130,6 +137,7 @@ namespace Library.App.Controllers
             return View(publisherCreateViewModel);
         }
 
+        // creating new author and save it in db
         [HttpPost]
         public ActionResult CreateAuthor(AuthorCreateViewModel viewModel)
         {
@@ -140,6 +148,7 @@ namespace Library.App.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        // creating new publisher and save it in db
         [HttpPost]
         public ActionResult CreatePublisher(PublisherCreateViewModel viewModel)
         {
@@ -150,6 +159,7 @@ namespace Library.App.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        // return list of users
         public async Task<ActionResult> ManageUsers()
         {
             var userRole = ApplicationUserManager.RoleManager.Roles.FirstOrDefault(f => f.Name == "user").Id;
@@ -158,6 +168,7 @@ namespace Library.App.Controllers
             return View(users);
         }
 
+        // return list of librarians
         public async Task<ActionResult> ManageLibrarians()
         {
             var role = ApplicationUserManager.RoleManager.Roles.FirstOrDefault(f => f.Name == "librarian").Id;
@@ -166,6 +177,7 @@ namespace Library.App.Controllers
             return View(librarians);
         }
 
+        // set librarian role to user
         public async Task<RedirectToRouteResult> CreateLibrarian(string userId)
         {
             var user = UserManager.Users.FirstOrDefault(u => u.Id == userId);
@@ -175,6 +187,7 @@ namespace Library.App.Controllers
             return RedirectToAction("ManageUsers");
         }
 
+        // remove librarian role to user
         public async Task<RedirectToRouteResult> DeleteLibrarian(string userId)
         {
             var user = UserManager.Users.FirstOrDefault(u => u.Id == userId);
@@ -184,6 +197,7 @@ namespace Library.App.Controllers
             return RedirectToAction("ManageLibrarians");
         }
 
+        // ban user
         public async Task<RedirectToRouteResult> BanUser(string userId)
         {
             var user = UserManager.Users.FirstOrDefault(u => u.Id == userId);
@@ -192,15 +206,18 @@ namespace Library.App.Controllers
             {
                 await UserManager.AddToRoleAsync(userId, "banned");
                 user.IsBanned = true;
+                UserManager.Update(user);
             }
             else if (UserManager.IsInRole(userId, "banned"))
             {
                 user.IsBanned = true;
+                UserManager.Update(user);
             }
 
             return RedirectToAction("ManageUsers");
         }
 
+        // unban user
         public async Task<RedirectToRouteResult> UnbanUser(string userId)
         {
             var user = UserManager.Users.FirstOrDefault(u => u.Id == userId);
@@ -209,10 +226,12 @@ namespace Library.App.Controllers
             {
                 await UserManager.RemoveFromRoleAsync(userId, "banned");
                 user.IsBanned = false;
+                UserManager.Update(user);
             }
             else if (!UserManager.IsInRole(userId, "banned"))
             {
                 user.IsBanned = false;
+                UserManager.Update(user);
             }
 
             return RedirectToAction("ManageUsers");

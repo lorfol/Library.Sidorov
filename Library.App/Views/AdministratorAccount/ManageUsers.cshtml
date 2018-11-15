@@ -29,7 +29,8 @@
                     {
                         @Html.ActionLink("Unban", "UnbanUser", "AdministratorAccount", new { userId = user.Id }, new { @class = "btn btn-warning" })
                     }
-                    else
+                    
+                    @if(!user.IsBanned)
                     {
                         @Html.ActionLink("Ban", "BanUser", "AdministratorAccount", new { userId = user.Id }, new { @class = "btn btn-danger" })
                     }

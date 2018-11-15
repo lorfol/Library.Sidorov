@@ -23,8 +23,10 @@ namespace Library.App
         {
             Database.SetInitializer<LibraryDbContext>(new LibraryDbInitializer());
 
+            // initialize automapper
             AutoMapperConfiguration.Configure();
 
+            // initialize dependency registration
             NinjectModule registrations = new NinjectRegistrations();
             var kernel = new StandardKernel(registrations);
             kernel.Unbind<ModelValidatorProvider>();

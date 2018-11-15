@@ -27,7 +27,7 @@
 
 
 <script>
-
+    // call method in controller and delete order row from dom
     function reject(orderId) {
         $.get(
             "/LibrarianAccount/RejectOrder",
@@ -52,18 +52,18 @@
 
 
     $(function () {
-        // Ссылка на автоматически-сгенерированный прокси хаба
+        // link on auto-generated hub proxy
         var message = $.connection.orderHub;
-        // Объявление функции, которая хаб вызывает при получении сообщений
+        // Declaring function that the hub calls when message recived
         message.client.addMessage = function (order) {
             debugger;
-            // Добавление сообщений на веб-страницу
+            // add message on web-page
             let ord = document.getElementById('order');
             ord.innerHTML += order;
         };
 
 
-        // Открываем соединение
+        // open connection
         $.connection.hub.start().done(function () {
             console.log("Connection!!!!!!!!!!!!!")
         });

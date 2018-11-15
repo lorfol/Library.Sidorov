@@ -1,0 +1,6 @@
+2018-11-15 00:47:20.0945|ERROR|Library.App.Logging.LibraryLogger|No property or field 'PublicationDate' exists in type 'Book'
+2018-11-15 00:47:38.6374|ERROR|Library.App.Logging.LibraryLogger|No property or field 'PublicationDate' exists in type 'Book'
+2018-11-15 00:49:48.5184|ERROR|Library.App.Logging.LibraryLogger|No property or field 'PublicationDate' exists in type 'Book'
+2018-11-15 00:50:02.0463|ERROR|Library.App.Logging.LibraryLogger|No property or field 'PublicationDate' exists in type 'Book'
+2018-11-15 00:52:26.5955|ERROR|Library.App.Logging.LibraryLogger|No property or field 'PublicationDate' exists in type 'Book'
+2018-11-15 01:26:41.1510|ERROR|Library.App.Logging.LibraryLogger|ƒл€ не €вл€ющегос€ статическим пол€ требуетс€ указать конечный объект.

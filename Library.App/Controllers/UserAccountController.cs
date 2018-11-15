@@ -16,6 +16,7 @@ namespace Library.App.Controllers
     {
         private ApplicationUserManager UserManager => HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
+        // providing user access to your account information
         public async Task<ActionResult> UserAccount()
         {
             var user = await this.UserManager.FindByEmailAsync(this.User.Identity.Name);
@@ -24,6 +25,7 @@ namespace Library.App.Controllers
             return View(mappedUser);
         }
 
+        // providing user access to the list of their orders
         public async Task<ActionResult> UserOrders(string userName)
         {
             var user = await this.UserManager.FindByEmailAsync(this.User.Identity.Name);

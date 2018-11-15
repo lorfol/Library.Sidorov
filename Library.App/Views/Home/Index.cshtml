@@ -83,9 +83,9 @@
             <th>
                 @using (Html.BeginForm("Index", "Home", FormMethod.Get))
                 {
-                    @Html.ActionLink("Year", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "PublicationDate", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "PublicationDate" ? "desc" : "asc" })
+                    @Html.ActionLink("Year", "Index", new { page = Request.QueryString["page"], search = Request.QueryString["Search"], orderBy = "PublicationYear", orderDirection = ViewBag.PreviosOrderDirection == "asc" && ViewBag.PreviosOrderBy == "PublicationYear" ? "desc" : "asc" })
 
-                    if (ViewBag.PreviosOrderBy == "PublicationDate")
+                    if (ViewBag.PreviosOrderBy == "PublicationYear")
                     {
                         if (ViewBag.PreviosOrderDirection == "asc")
                         {

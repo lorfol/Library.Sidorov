@@ -17,7 +17,7 @@ namespace Library.App.Controllers
     [System.Web.Mvc.Authorize(Roles = "user")]
     public class OrderController : Controller
     {
-        IUnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
         private ApplicationUserManager UserManager => HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
@@ -26,6 +26,7 @@ namespace Library.App.Controllers
             this.unitOfWork = unitOfWork;
         }
 
+        // Creating new order
         public async Task<ActionResult> CreateBookOrder(int bookId, bool isAtReadingRoom)
         {
             if (User.IsInRole("banned"))
@@ -59,20 +60,12 @@ namespace Library.App.Controllers
             orderView.UserName = user.UserName;
 
             var htmlPartial = this.RenderViewToString(ControllerContext, "NewOrderPartialView", orderView);
-            hubContext.Clients.All.addMessage(htmlPartial);
+            hubContext.Clients.All.addMessage(htmlPartial); // Calling a method on all clients
 
             return RedirectToAction("UserOrders", "UserAccount");
         }
 
-        //[HttpGet]
-        //public ActionResult GetCountOfOrders()
-        //{
-        //    var user = this.HttpContext.User;
-        //    this.unitOfWork.Orders.Find(f => f.User.Name == user.Identity.Name);
-
-        //    return this.Json(2, JsonRequestBehavior.AllowGet);
-        //}
-
+        // convert partial view to string
         private string RenderViewToString(ControllerContext context, string viewName, object model)
         {
             if (string.IsNullOrEmpty(viewName))

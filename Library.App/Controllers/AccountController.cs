@@ -17,11 +17,13 @@ namespace Library.App.Controllers
 
         private IAuthenticationManager AuthenticationManager => HttpContext.GetOwinContext().Authentication;
 
+        // return form for register user
         public ActionResult Register()
         {
             return View("Register");
         }
 
+        // register new user in sistem
         [HttpPost]
         public async Task<ActionResult> Register(RegisterModel model)
         {
@@ -56,11 +58,13 @@ namespace Library.App.Controllers
             return View(model);
         }
 
+        // return form for login
         public ActionResult Login()
         {
             return View("Login");
         }
 
+        // ligin user in sistem
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginModel model)

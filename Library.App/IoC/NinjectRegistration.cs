@@ -8,6 +8,7 @@ namespace Library.App.IoC
 {
     public class NinjectRegistrations : NinjectModule
     {
+        // global dependency registration
         public override void Load()
         {
             Bind<IUnitOfWork>().To<UnitOfWork>();

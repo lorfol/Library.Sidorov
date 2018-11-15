@@ -7,6 +7,7 @@ namespace Library.App.Mapping
 {
     public class MappingProfile : Profile
     {
+        // description of entity mapping
         public MappingProfile()
         {
             CreateMap<Book, BookViewModel>()
